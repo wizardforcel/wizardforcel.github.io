@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta name="referrer" content="never">
+  
+  
+  <meta name="description" content="一个独立开发者的博客。吾名飞龙。">
+  
+
+  
+  <meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+  
+  
+  <meta name="google-site-verification" content="NCXVSqxqB-os803-VFMtIEd1SUNJVOIjctCfNYUwD0w">
+  <meta name="baidu-site-verification" content="Nzwx7HuplM">
+  
+  <meta name="msvalidate.01" content="9E9EA92F7E5327E1FE8A5196D5253664">
+  
+  
+  
+  <title>降维攻击 | 龙哥盟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="转自知乎@石昊的回答：  互联网思维就是基本功能免费，增值服务收费。比如QQ，比如360，基础的聊天、杀毒功能都是免费的，那什么是赚钱的？比如QQ秀，或者是腾讯游戏，或者是广告收入等。它们为什么费心在增值服务上收费，而不直接在QQ的聊天上，360的杀毒上收费呢？而要将基础功能做成免费？答案很简单，为了铺量，如果QQ的聊天，360的杀毒收费，恐怕用它们的人会很少。大家都有一个这样的想法，收费的不如免">
+<meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="降维攻击">
+<meta property="og:url" content="http://www.flygon.net/关于米5的各种消息/index.html">
+<meta property="og:site_name" content="龙哥盟">
+<meta property="og:description" content="转自知乎@石昊的回答：  互联网思维就是基本功能免费，增值服务收费。比如QQ，比如360，基础的聊天、杀毒功能都是免费的，那什么是赚钱的？比如QQ秀，或者是腾讯游戏，或者是广告收入等。它们为什么费心在增值服务上收费，而不直接在QQ的聊天上，360的杀毒上收费呢？而要将基础功能做成免费？答案很简单，为了铺量，如果QQ的聊天，360的杀毒收费，恐怕用它们的人会很少。大家都有一个这样的想法，收费的不如免">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-02-01T06:03:47.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="降维攻击">
+<meta name="twitter:description" content="转自知乎@石昊的回答：  互联网思维就是基本功能免费，增值服务收费。比如QQ，比如360，基础的聊天、杀毒功能都是免费的，那什么是赚钱的？比如QQ秀，或者是腾讯游戏，或者是广告收入等。它们为什么费心在增值服务上收费，而不直接在QQ的聊天上，360的杀毒上收费呢？而要将基础功能做成免费？答案很简单，为了铺量，如果QQ的聊天，360的杀毒收费，恐怕用它们的人会很少。大家都有一个这样的想法，收费的不如免">
+  
+    <link rel="alternative" href="/atom.xml" title="龙哥盟" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7u2hdm.com1.z0.glb.clouddn.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="龙哥盟" rel="home">龙哥盟</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">英特纳雄耐尔，就一定要实现。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://home.apachecn.org/info/">ApacheCN</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://it-ebooks.flygon.net/">布客新知</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/works">作品集</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/donors">捐赠名单</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/about">关于我</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/atom.xml">RSS</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://github.com/wizardforcel/blog">fork me on github</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-关于米5的各种消息" class="post-关于米5的各种消息 post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      降维攻击
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/关于米5的各种消息/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://www.flygon.net/关于米5的各种消息/" data-id="ckz3ptvci006eb8q10khkld1y" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>转自<a href="http://www.zhihu.com/question/26709451/answer/33797058" target="_blank" rel="noopener">知乎</a>@石昊的回答：</p>
+<pre>
+互联网思维就是基本功能免费，增值服务收费。比如QQ，比如360，基础的聊天、杀毒功能都是免费的，那什么是赚钱的？比如QQ秀，或者是腾讯游戏，或者是广告收入等。它们为什么费心在增值服务上收费，而不直接在QQ的聊天上，360的杀毒上收费呢？而要将基础功能做成免费？答案很简单，为了铺量，如果QQ的聊天，360的杀毒收费，恐怕用它们的人会很少。大家都有一个这样的想法，收费的不如免费的，收费的还要钱，万一感觉不好岂不是白花了钱？而免费的，哪怕差点，好歹免费啊，哪怕感觉不好，不用就是了，没有一点损失。所以大家都往免费的软件上凑。
+
+而用在手机上是怎样呢？那就是手机这个硬件免费，靠增值服务，比如各种配件、手机软件、互联网服务收费。可手机硬件成本不像软件的成本，摊在每个人头上非常低，手机成本实实在在的需要材料，目前很难通过各种增值服务弥补硬件成本，那么怎么办呢？有办法，我手机贴近成本价发售，这样也可以大量铺量，并且可以靠各种增值服务赚钱，这样就安全多了。
+
+小米模式就是这样，简单的说，靠接近成本价的手机等硬件大量铺量，并且在硬件上搭建软件和互联网服务，同时出售各种周边产品，靠这些来赚钱。所以说，小米不（仅仅）是一家手机企业，它是互联网企业。他想做的是互联网行业的巨头，而不是手机行业的巨头，手机只是用来铺量的手段而已，等到手机的量达到一定的层次，就可以靠手机里面的各种软件和互联网服务赚钱了。就像腾讯的QQ，本身不赚钱，但是用QQ的人太多了，于是腾讯靠各种增值服务，比如游戏，比如QQ秀，会员等增值服务赚钱。QQ只是用来获取用来获取用户流量的手段而已。
+
+...
+
+所以，小米接下来会怎么做？小米接下来会将这一思维贯彻下去，硬件接近成本价销售，随着元器件价格下跌。一有利润，马上让硬件降价，再接近成本价销售。这样由于硬件很便宜，就会有很多人买，一旦miui用户有了好几亿，那么，搭载在miui当中的软件和互联网服务就可以大展拳脚赚钱了。而软件和互联网服务赚钱，可以拿出一部分，补贴硬件成本。让硬件价格再次下跌，硬件价格一旦下跌，那么性价比会更突出，就会有更多的miui用户。有更多的miui用户，软件和互联网服务赚的钱就越可观，软件和互联网服务赚的钱越多，硬件价格就可以进一步下降。这是一个良性循环。那么，最终，小米模式会演变成怎样？
+
+那就是硬件完全免费！靠软件和互联网服务赚钱！
+
+试想一下，假设小米硬件完全免费，靠软件和互联网服务赚钱。那么这时，小米的软件和互联网生态一定是极其完善。那么，一台免费，而且服务非常完善的手机和其他要钱、而且服务比不上小米手机的手机，你会买哪一个？
+
+这就是三体中的降维打击！一旦小米真的能做到这一步，基本上天下无敌了。硬件都免费了，其他硬件企业还怎么和小米对抗啊？如果谁都用小米家的硬件，那么也非常容易通过小米家的硬件用小米家的软件和互联网服务，那么，这样一个变态的互联网企业，其他互联网企业又怎样和小米对抗？
+</pre>
+
+<p>其实小米的这个现象马云之前也提到过，当时他说的是跨界竞争：</p>
+<pre>
+我看最彻底的竞争是跨界竞争，你认为收费的主营业务，一个跨界的进来，免费，因为人家根本不靠整个赚钱，你美滋滋的活了好多年，结果到最后不知道怎么死的。
+</pre>
+
+<p>只不过小米把它付诸实施了而已。凭这一点，我看好小米的模式，希望有朝一日移动互联网能够惠及千家万户，有更多企业能做得出大部分人都能用得起的电子产品。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/关于米5的各种消息/">
+    <time datetime="2014-11-22T20:43:02.000Z" class="entry-date">
+        11月 22 2014
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/杂记/">杂记</a>
+  </div>
+
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/The-First-Diary-in-English/" rel="prev"><span class="meta-nav">←</span> The First Diary in English</a></span>
+    
+    
+        <span class="nav-next"><a href="/Lines-of-Code/" rel="next">Lines of Code <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-关于米5的各种消息" data-title="降维攻击" data-url="http://www.flygon.net/关于米5的各种消息/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'flhexo'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside class="widget">
+    <h3 class="widget-title">关于我</h3>
+    <div class="widget-content">
+      <p>邮箱：admin(at)flygon.net</p>
+      <p>QQ：562826179</p>
+      <iframe width="100%" height="110" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=0&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=1&uid=2216356441&verifier=2e06a95d&dpc=1"></iframe>
+      
+      <iframe width="100%" height="320" frameborder="0" scrolling="no" src="https://cdn.jsdelivr.net/github-cards/1.0.2/cards/medium.html?user=wizardforcel&identity=ghcard-wizardforcel-1"></iframe>
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">赞助我</h3>
+    <div class="widget-content">
+      <img src='/css/images/qr_alipay.png' style='width:100%;' />
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">公众号</h3>
+    <div class="widget-content">
+      <p>请关注我们的公众号，回复“教程/路线/比赛/报告/技术书/轻小说/漫画/新知”来获取更多资源：</p>
+      <p><img src='https://home.apachecn.org/img/about/gzh_qr.jpg' style='width:100%;background:rgba(255,255,255,0.6)' /></p>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="/asset/杀不死的SB%20-%20in3.aac" controls="controls"
+             loop="loop" style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+    <h3 class="widget-title">广告</h3>
+    <div class="widget-content">
+        <!-- google ads -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:250px;height:250px"
+             data-ad-client="ca-pub-3565452474788507"
+             data-ad-slot="9493159174"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/项目沉思录-1/">项目沉思录 1</a>
+          </li>
+        
+          <li>
+            <a href="/2022-规划/">2022 规划</a>
+          </li>
+        
+          <li>
+            <a href="/资本主义反抗指南精要-v0.1/">资本主义反抗指南精要（v0.1）</a>
+          </li>
+        
+          <li>
+            <a href="/2021-规划/">2021 规划</a>
+          </li>
+        
+          <li>
+            <a href="/2020-规划/">2020 规划</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget-content">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">七月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">一月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">十一月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">十月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">九月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">八月 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1899/11/">十一月 1899</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/公告/">公告</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用/">应用</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂记/">杂记</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">45</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站/">网站</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Invoke/" style="font-size: 10px;">Invoke</a> <a href="/tags/awvs/" style="font-size: 10px;">awvs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/csharp/" style="font-size: 15px;">csharp</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/safe3/" style="font-size: 10px;">safe3</a> <a href="/tags/sqlmap/" style="font-size: 15px;">sqlmap</a> <a href="/tags/sql注入/" style="font-size: 20px;">sql注入</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/多线程/" style="font-size: 15px;">多线程</a> <a href="/tags/密码/" style="font-size: 10px;">密码</a> <a href="/tags/生物劝退/" style="font-size: 10px;">生物劝退</a> <a href="/tags/编程/" style="font-size: 20px;">编程</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+<h3 class="widget-title">友情链接</h3>
+<div class="widget-content">
+<ul id='link-list'>
+<!-- link begin -->
+<li><a href="http://www.apachecn.org/">ApacheCN</a></li>
+<li><a href="http://www.258ch.com/">苍海国际</a></li>
+<li><a href="http://www.714.hk/">梦殇国际</a></li>
+<li><a href="http://cuican.name/">璀璨</a></li>
+<li><a href="http://www.giuem.com/">Giuem</a></li>
+<li><a href="http://www.woaiye.com/">我爱夜</a></li>
+<li><a href="http://moelove.info/">MoeLove</a></li>
+<li><a href='http://xiaohudie.net/'>小蝴蝶</a></li>
+<li><a href='http://www.wczf.net/'>微尘逐风</a></li>
+<li><a href='http://cyto.top/'>Cytosine</a></li>
+<li><a href='https://cismon.net/'>Pensieve</a></li>
+<li><a href="http://gaocegege.com/Blog/">高策</a></li>
+<li><a href='http://zhangwenli.com/blog/'>羡辙杂俎</a></li>
+<li><a href="http://www.geekzu.cn/">极客族</a></li>
+<li><a href="http://hardrain980.com">骤雨</a></li>
+<li><a href="http://lolil.lofter.com/">庭园</a></li>
+<li><a href="http://www.sunweihu.com/">墨涩网</a></li>
+<li><a href='http://lvycf.com'>HDL</a></li>
+<li><a href='http://www.farquer.cn/'>farquer</a></li>
+<li><a href='https://loveincode.cnblogs.com/'>loveincode</a></li>
+<li><a href='https://minemine.cc/'>Minemine</a></li>
+<!-- link end -->
+</ul>
+</div>
+<script>
+    // links shuffle
+    document.addEventListener('DOMContentLoaded', evt => {
+        var linkUl = document.querySelector('#link-list');
+        var links = document.querySelectorAll('#link-list li');
+        links = Array.from(links);
+        links.forEach(x => x.remove());
+        var len = links.length;
+        for(var i = 0; i < len; i++) {
+            var r = Math.floor(Math.random() * links.length);
+            linkUl.append(links[r]);
+            links.splice(r, 1);
+        }
+    });
+</script>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">统计</h3>
+    <div class="widget-content">
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000045945'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000045945%26online%3D1' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+</aside>
+
+  
+    <script>
+    // sub title
+    var subtitleList = [
+        "『卑鄙是卑鄙者的通行证，高尚是高尚者的墓志铭。』——北岛",
+        "『坦白从宽牢底坐穿，抗拒从严回家过年。』",
+        "『所有模型都是错的，但其中一些是有用的。』",
+        "『程序员的双手是魔术师的双手，他们把枯燥无味的代码变成了丰富多彩的软件。』——《疯狂的程序员》",
+        "『质疑计算机能不能思考，就相当于质疑潜艇能不能游泳。』——Edsger Dijkstra",
+        "人们认为计算机科学是天才的艺术，但是实际情况相反，只是许多人在其它人基础上做一些东西，就像一面由石子垒成的墙。』——高德纳",
+        "『Stay young. Stay simple. Always naive!』",
+        "『你们媒体千万要记着，不要「见得风，是得雨」。接到消息，你们媒体本身也要判断。』——长者",
+        "『假设这些完全无中生有的东西，你再帮他说一遍，你等于......你也有责任吧？』——长者",
+        "『刚才你问我啊，我可以回答你一句「无可奉告」。』——长者",
+        "『我告诉你们我是身经百战了，见得多了！』——长者",
+        "『美国的华莱士，比你们不知要高到哪里去了，我跟他谈笑风生。』——长者",
+        "『我有这个必要告诉你们一点，人生的经验。』——长者",
+        "『我没有说要钦定，没有任何这个意思。』——长者",
+        "『你们啊，不要想喜欢弄个大新闻，说现在已经钦定了，就把我批判一番。』——长者",
+        "『一个人的命运啊，当然要靠自我奋斗，但是也要考虑历史的进程。』——长者",
+        "『我说另请高明吧，我实在也不是谦虚。』——长者",
+        "『苟利国家生死以，岂因祸福避趋之。』——林则徐",
+        "『敢同恶鬼争高下，不向霸王让寸分。』——毛泽东",
+        "『我生不为逐鹿来，都门懒筑黄金台。状元百官都如狗，总是刀下觳觫材。』——张献忠",
+        "『我自成佛自度我，佛度凡尘我度佛。』",
+        "『龙吟九天，一曲焚尘；苍山听雪，归时余几人。』",
+        "『人最大的痛苦就是说一些自己都不相信的话。』",
+        "『燃琴为薪，铸银矢以射白羽；斑音成竹，裁短笛而驭青龙。』",
+        "『我们在人生的每个阶段，能影响多少人，就影响多少人，哪怕只能影响一个人，也好过不影响。』——罗永浩",
+        "『每个人心中都有一个死小孩。』——《龙族II》",
+        "『前面是山，我们就爬山；前面是海，我们就渡海；前面是皇宫，我们就开炮！』——《龙族前传》",
+        "『不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意；不要嘲讽那些比自己更勇敢热情的人们。我们可以卑微如尘土，不可扭曲如蛆虫。』——季业",
+    ];
+    
+    document.addEventListener('DOMContentLoaded', evt => {
+        var i = Math.floor(Math.random() * subtitleList.length);
+        document.querySelector('#subtitle').innerText = subtitleList[i];
+    });
+
+    //Kill XP and IE8
+    (function(){
+        var ua = navigator.userAgent;
+        var res = /Windows NT (\d+\.\d+)/.exec(ua);
+        var xpOrLower = res && JSON.parse(res[1]) < 6;
+        res = /MSIE (\d+\.\d+)/.exec(ua);
+        var ie8OrLower = res && JSON.parse(res[1]) < 9;
+        if(xpOrLower || ie8OrLower) {
+            alert('请不要用XP及之前的Windows系统，和IE8及之前的IE浏览器访问本站！');
+            location.href = "about:blank";
+        }
+        var fromBaiduSE = /^https?:\/\/www.baidu.com/.test(document.referrer);
+        if(fromBaiduSE) {
+            alert('检测到你还在使用百度搜索，作为一个程序员，这是一种自暴自弃！\n\n做不作恶的程序员，从不用百度开始！');
+            location.href = "about:blank";
+        }
+    })();
+</script>
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2022 Flygon; All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

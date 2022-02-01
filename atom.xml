@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>龙哥盟</title>
+  
+  <subtitle>英特纳雄耐尔，就一定要实现。</subtitle>
+  <link href="http://www.flygon.net/atom.xml" rel="self"/>
+  
+  <link href="http://www.flygon.net/"/>
+  <updated>2022-02-01T06:03:47.207Z</updated>
+  <id>http://www.flygon.net/</id>
+  
+  <author>
+    <name>Flygon</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>项目沉思录 1</title>
+    <link href="http://www.flygon.net/%E9%A1%B9%E7%9B%AE%E6%B2%89%E6%80%9D%E5%BD%95-1/"/>
+    <id>http://www.flygon.net/%E9%A1%B9%E7%9B%AE%E6%B2%89%E6%80%9D%E5%BD%95-1/</id>
+    <published>2022-01-16T00:00:00.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>从我大学开始到现在，做过这么多项目，现在回想一下，发现走了很多弯路。当时的情况可以说不是很好，自己水平菜，生活条件不好，网上的学习资料也不多，但更多的是策略上的问题。因此我打算记录下来这些东西，时刻提醒自己，过去的事情没办法挽回了，以后一定要避免这些错误。</p><a id="more"></a><p>（1）及时止损：当一个项目走下坡路的时候，立即搁置它（只改BUG不增加功能），迅速转移到类似项目。</p><p>2013 年年末，由于贴吧人气在慢慢下降，我搞得贴吧辅助就没什么人用了。我迅速<a href="https://github.com/258ch" target="_blank" rel="noopener">把它们开源</a>，然后开始了<a href="https://it-ebooks.apachecn.org/" target="_blank" rel="noopener">编程教程整理</a>。</p><p>（2）薪尽火传：一个项目彻底完蛋之后，总结可以复用的技术和经验教训，立即投入到新的项目中。</p><p>这点我做的不好，因为贴吧辅助和游戏辅助是极为相似的，贴吧辅助项目彻底停止之后，我没有去做任何一个游戏辅助项目，直到 2018 年才开始做。</p><p>（3）道德突破：丢掉一切道德和情绪包袱。</p><p>ApacheCN 开始搞宣传的时候是通过邮件，那个时候核心成员有各种各样的道德包袱，导致这个宣传计划没有按预期进行。当时我还没当回事，后面的另一个计划失败，然后我就彻底清理核心成员，重建核心团队。</p><p>现在虽然 ApacheCN 是 Github 全球百大开源组织，但错过的东西就永远回不来了。</p><p>（4）当一个项目推进不下去的时候，一定有可以优化的点，可能是自动化，流程重排，或者外包。</p><p>刚开始整理编程教程的时候，我完全是手动，非常慢，一天也就整理一部。后来用上了爬虫，一天可以爬一个站点的所有教程，一年可以整理和入库几个 G。</p><p>（5）做一个项目的时候，只给自己一次机会，假设以后再也没机会做相同事情了。</p><p>我读研的时候有很多时间，但不知道为啥都浪费了，现在没有时间，但感觉要做的东西基本都有条件在那个时候做完，然后现在可以干点更高级的事情，真是遗憾。</p><p>（6）先完成再完善：先把每个模块做一点，完成一个可以独立运行和给人用的产品。不要一上来就打磨单个模块。</p><p>ApacheCN 的翻译项目一般要经过四个步骤：机翻-&gt;格式校对-&gt;众包校对-&gt;复核。之前都是串行的，效率很慢，一年刚完成五部你能信？后来策略改成了机翻后直接发版，所有待翻译列表都机翻完了才走下一步，然后不到半年就都机翻完毕了。而且机翻水平就是英语六级，起码还是能看的。</p><p>（7）最小依赖：如果一个技能不可或缺，可以暂时外包，但以后必须自己学会。</p><p>典型的例子就是 CDNDrive，原作者不维护了我们接着做，现在用它把编程教程和漫画备份了 20 多个副本。</p><p>（8）啃硬骨头：如果一个东西不可或缺但是会的人少，一定要把它啃下来，以后很可能用到。</p><p>我在做贴吧辅助期间也搞搞逆向，不过自然是没怎么用心。结果读研的时候我们实验室接工业软件逆向的项目，我还要花时间再去学。</p><p>刷题也是一样，不要等面试之前再去准备，平时就要多练习。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;从我大学开始到现在，做过这么多项目，现在回想一下，发现走了很多弯路。当时的情况可以说不是很好，自己水平菜，生活条件不好，网上的学习资料也不多，但更多的是策略上的问题。因此我打算记录下来这些东西，时刻提醒自己，过去的事情没办法挽回了，以后一定要避免这些错误。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="杂记" scheme="http://www.flygon.net/categories/杂记/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2022 规划</title>
+    <link href="http://www.flygon.net/2022-%E8%A7%84%E5%88%92/"/>
+    <id>http://www.flygon.net/2022-%E8%A7%84%E5%88%92/</id>
+    <published>2021-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>【饱和式翻译计划】将会在2022.7之前完成，之后每五年迭代一次。</p><p>包含在此次迭代的专项有：</p><ul><li>DevOps（√）</li><li>数值算法</li><li>应用密码学</li><li>Quant</li><li>源码分析</li></ul><p>不包含的有：</p><ul><li>Verilog</li><li>AI 创作</li></ul></li><li><p>【自动化计划】，包括游戏+视频+宣传基础设施，和Quant流水线。</p></li><li><p>【情感自由计划】将于几个月之后启动，将探索剧本杀/电音节/夜店/漫展这场景。</p></li><li><p>【IT应试计划】已拆分，已源码分析合并进【饱和式翻译计划】，八股文整理（√）和刷题合并进日常整理任务中。</p></li><li><p>轻小说备份从每年七月改到一月。</p></li><li><p>【漏洞文库计划】和【架构师消灭计划】因为做不完而转到明年。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;【饱和式翻译计划】将会在2022.7之前完成，之后每五年迭代一次。&lt;/p&gt;
+&lt;p&gt;包含在此次迭代的专项有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DevOps（√）&lt;/li&gt;
+&lt;li&gt;数值算法&lt;/li&gt;
+&lt;li&gt;应用密码学&lt;/li&gt;
+&lt;li&gt;Quant&lt;/li&gt;
+&lt;l</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>资本主义反抗指南精要（v0.1）</title>
+    <link href="http://www.flygon.net/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E5%8F%8D%E6%8A%97%E6%8C%87%E5%8D%97%E7%B2%BE%E8%A6%81-v0.1/"/>
+    <id>http://www.flygon.net/%E8%B5%84%E6%9C%AC%E4%B8%BB%E4%B9%89%E5%8F%8D%E6%8A%97%E6%8C%87%E5%8D%97%E7%B2%BE%E8%A6%81-v0.1/</id>
+    <published>2021-01-26T12:04:14.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>（1）充分预估工作时间，比如一小时的开发任务，你可以加上技术调研，API/数据库设计，单元测试，联调，集成测试等等，拖到一天，同理一天的任务可以拖到一星期。</p><p>（2）简历上尽一切手段来美化，最好能包装成领域专家，方便以后找工作。最好混进大中型公司，摸鱼不容易发现。</p><p>（3）生活上注重性价比，能不买就不买，能买二手就买二手，能团购就团购，能薅羊毛就薅羊毛。</p><p>（4）虚拟产品能不掏钱就不掏钱，找各种渠道。</p><p>（5）不要把钱浪费在名牌上，能买山寨就买山寨，山寨也找不到就买同款然后自己贴牌。</p><p>（6）学会装逼，吹逼（BullShit），例如把自己包装成富二代。你包装的越好，请你吃饭的男人/妹子越多，你就能把钱省下来。省下来的钱全部投入到健身理财和学习上。</p><p>（7）等你自己有钱了，就挖资本主义墙角，<strong>在充分保护好自己，并且能承担后果的情况下</strong>，它们怎么样损失大你就怎么搞，它们怎么生气你就怎么说话。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;（1）充分预估工作时间，比如一小时的开发任务，你可以加上技术调研，API/数据库设计，单元测试，联调，集成测试等等，拖到一天，同理一天的任务可以拖到一星期。&lt;/p&gt;
+&lt;p&gt;（2）简历上尽一切手段来美化，最好能包装成领域专家，方便以后找工作。最好混进大中型公司，摸鱼不容易发现</summary>
+      
+    
+    
+    
+    <category term="应用" scheme="http://www.flygon.net/categories/应用/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021 规划</title>
+    <link href="http://www.flygon.net/2021-%E8%A7%84%E5%88%92/"/>
+    <id>http://www.flygon.net/2021-%E8%A7%84%E5%88%92/</id>
+    <published>2020-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>【√】继续“饱和式翻译计划”的剩余部分，包括：<ul><li>GeeksForGeeks</li><li>Succinctly</li><li>高校讲义</li><li>FreeProgramming</li><li>其它中短篇</li></ul></li><li>【X】将已有文档和教程打成 APK 包并分发</li><li>【X】探索如何将已有文档去中心化，整合到区块链生态中</li><li>【√】探索基金的玩法，建设好 iBooker 技术变现和财务提升群<ul><li>非常感谢<a href="https://weibo.com/u/3340707810" target="_blank" rel="noopener">@张怡</a>和<a href="https://weibo.com/u/7123708810" target="_blank" rel="noopener">@阿琳</a></li></ul></li><li>【√】备份 EHentai/NHentai</li><li>【√】提升参加/组织线下活动的频率，把装逼文化带到线下</li><li>【X】集合苍海国际、一本黑、灰产哥社群的经验，探索宣传和增长的持续和低成本方式</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;【√】继续“饱和式翻译计划”的剩余部分，包括：&lt;ul&gt;
+&lt;li&gt;GeeksForGeeks&lt;/li&gt;
+&lt;li&gt;Succinctly&lt;/li&gt;
+&lt;li&gt;高校讲义&lt;/li&gt;
+&lt;li&gt;FreeProgramming&lt;/li&gt;
+&lt;li&gt;其它中短篇&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2020 规划</title>
+    <link href="http://www.flygon.net/2020-%E8%A7%84%E5%88%92/"/>
+    <id>http://www.flygon.net/2020-%E8%A7%84%E5%88%92/</id>
+    <published>2019-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>我没啥特别的祝福词，首先祝大家 2020 年🐮🍺！</p><p>2019 的成就就不说了，直奔主题。</p><ol><li><p>【X】找到副业和财路。</p><p>在这个方面我会用运营苍海国际和 ApacheCN 过程中积累的技术。</p><p>可能需要准备一些依赖项。例如实名制之后注册小号需要卡池，尽可能多和自媒体和微商学学吧。</p><p>如果你有一定的业务，只需要让它盈利就行了，总比啥都没有强。我 TM 就不信我做不到了，艹。</p></li><li><p>【X】寻找自己的爱情。如果 2020 年没有实现，就放到 2021 年。</p></li><li><p>【√】修复 BiliDrive。</p><p>B 站图床限制了格式不能是 BMP，并且大小在 10x10 以上。这个很好绕过。</p><p>这个网盘有 CDN 加持，容量上不封顶，下载速度取决于你家网速，一般情况下不会断链，而且还不是一个，是十几个，想想就刺激。</p></li><li><p>【X】有时间的话，打一打 AI 比赛。</p><p>Quant 就不搞了，这个行业形势不太好，华尔街缩招批量转码农，国内没搞起来。而且门槛太高一个人搞不了。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我没啥特别的祝福词，首先祝大家 2020 年🐮🍺！&lt;/p&gt;
+&lt;p&gt;2019 的成就就不说了，直奔主题。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;【X】找到副业和财路。&lt;/p&gt;
+&lt;p&gt;在这个方面我会用运营苍海国际和 ApacheCN 过程中积累的技术。&lt;/p&gt;
+&lt;p&gt;可能需要准备</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Kiwix：离线的维基百科</title>
+    <link href="http://www.flygon.net/Kiwix%EF%BC%9A%E7%A6%BB%E7%BA%BF%E7%9A%84%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/"/>
+    <id>http://www.flygon.net/Kiwix%EF%BC%9A%E7%A6%BB%E7%BA%BF%E7%9A%84%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91/</id>
+    <published>2019-05-04T12:37:52.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://wiki.kiwix.org/w/images/thumb/5/5b/Kiwix_0.9_alpha1_screenshot_en.png/285px-Kiwix_0.9_alpha1_screenshot_en.png" alt="Kiwix 0.9 alpha1 screenshot en.png"><br><strong>Kiwix</strong>让您能够随身携带完整的维基百科！无论您搭乘船只，还是身处偏僻的地区，抑或身陷囹圄，Kiwix都使您能够接触到全人类的知识。您不需要连接因特网，因为所有的资料都储存在您的电脑，优盘或者DVD中！</p><p><a href="https://wiki.kiwix.org/wiki/Content/zh-cn" target="_blank" rel="noopener">需要了解更多内容？</a></p><a id="more"></a><h2 id="Kiwix是什么…"><a href="#Kiwix是什么…" class="headerlink" title="Kiwix是什么…"></a>Kiwix是什么…</h2><p><strong>Kiwix</strong>是一款离线网页浏览器。它是为维基百科离线化而设计的，但是也潜在地适合所有HTML类型的内容。Kiwix支持<a href="http://www.openzim.org" target="_blank" rel="noopener">ZIM 格式</a>，它是一种高度压缩、附加元数据的开放文档格式。</p><p>Kiwix是一款<a href="http://zh.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E8%BD%AF%E4%BB%B6" target="_blank" rel="noopener">自由软件</a>，这意味着您可以不受限制地<a href="https://wiki.kiwix.org/wiki/Special:MyLanguage/development" title="Special:MyLanguage/development" target="_blank" rel="noopener">复制、修改和分发它</a>。</p><p>Kiwix大多数安装在没有能力使用宽带上网的（中、小）学校、大学以及图书馆。它要比使用因特网快很多，同时也可以为很多机构节省网络的带宽和阅读者的时间。但是，很多人使用Kiwix有着自己的个人目的，比如，遭受互联网审查的人们以及罪犯们。</p><p>Kiwix非常容易使用。它有很多便于使用的特性：</p><ul><li>全文搜索引擎</li><li>书签和笔记</li><li>HTTP服务器</li><li>导出PDF和HTML文档</li><li>100多种语言的界面</li><li>标签页导航</li><li>集成的内容管理与下载</li><li><a href="https://wiki.kiwix.org/wiki/Special:MyLanguage/Features" title="Special:MyLanguage/Features" target="_blank" rel="noopener">更多特性…</a></li></ul><p>Kiwix是一款小巧高效的软件，可以在低配置或者旧的计算机上使用。它可以运行在很多种操作系统上，比如安卓以及PC上三个主要的操作系统：Microsoft Windows、Apple Mac OSX以及GNU/Linux发行版。</p><p><a href="https://wiki.kiwix.org/wiki/Software/zh-cn" title="Software/zh-cn" target="_blank" rel="noopener">其他操作系统…</a></p><p><strong><a href="https://wiki.kiwix.org/wiki/Software/zh-cn" title="Software/zh-cn" target="_blank" rel="noopener">更多有关如何下载、安装以及使用Kiwix的内容…</a></strong></p><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul><li><a href="https://download.kiwix.org/release/kiwix-desktop/kiwix-desktop_windows_x64.zip" target="_blank" rel="noopener">Kiwix 阅读器</a></li><li><a href="http://download.kiwix.org/zim/wikipedia_zh_all.zim" target="_blank" rel="noopener">维基百科数据包</a><ul><li><a href="http://download.kiwix.org/zim/wikipedia_zh_all.zim.torrent" target="_blank" rel="noopener">使用 BitTorrent</a></li></ul></li><li><a href="https://wiki.kiwix.org/wiki/Content/zh-cn" target="_blank" rel="noopener">英文的其他版本（包括不含图片的极小镜像）</a></li><li><a href="https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn" target="_blank" rel="noopener">其他（除了英语之外的）语言…</a></li></ul><h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul><li><a href="http://input.kiwix.org" target="_blank" rel="noopener">给我们留下反馈或告诉我们好的想法</a></li><li><a href="http://reportabug.kiwix.org" target="_blank" rel="noopener">报告问题</a> 或 <a href="http://requestafeature.kiwix.org" target="_blank" rel="noopener">请求更多功能</a></li><li>给我们发送电子邮件: contact (at) kiwix.org</li><li>Jabber: kelson (at) kiwix.org</li><li>IRC: #kiwix on irc.freenode.net join or <a href="http://chat.kiwix.org" target="_blank" rel="noopener">使用网页版界面</a></li></ul><!--知乎备份：如何评价维基百科被全站封锁？https://img-blog.csdnimg.cn/20190504123042418.png-->]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://wiki.kiwix.org/w/images/thumb/5/5b/Kiwix_0.9_alpha1_screenshot_en.png/285px-Kiwix_0.9_alpha1_screenshot_en.png&quot; alt=&quot;Kiwix 0.9 alpha1 screenshot en.png&quot;&gt;&lt;br&gt;&lt;strong&gt;Kiwix&lt;/strong&gt;让您能够随身携带完整的维基百科！无论您搭乘船只，还是身处偏僻的地区，抑或身陷囹圄，Kiwix都使您能够接触到全人类的知识。您不需要连接因特网，因为所有的资料都储存在您的电脑，优盘或者DVD中！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://wiki.kiwix.org/wiki/Content/zh-cn&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;需要了解更多内容？&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解决 SmallPDF 联网验证和试用期过期问题</title>
+    <link href="http://www.flygon.net/%E8%A7%A3%E5%86%B3-smallpdf-%E8%AF%95%E7%94%A8%E6%9C%9F%E8%BF%87%E6%9C%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.flygon.net/%E8%A7%A3%E5%86%B3-smallpdf-%E8%AF%95%E7%94%A8%E6%9C%9F%E8%BF%87%E6%9C%9F%E9%97%AE%E9%A2%98/</id>
+    <published>2019-04-16T20:21:00.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>特别感谢：<a href="https://www.52pojie.cn/thread-899911-1-1.html" target="_blank" rel="noopener">攻防之间</a></p></blockquote><p>SmallPDF 是一款非常好用的 PDF 工具箱，具有压缩、格式转换、合并分割、解锁、保护等实用功能。它的在线版是完全免费的，但是文件传输很慢，桌面版完全在本地执行操作，免费试用 5 次。</p><p>首先确认一下版本，我的版本是 1.24.0，不保证这个方法以后还能用。</p><p><img src="https://ws1.sinaimg.cn/large/841aea59ly1g24qpwzg00j20a60950sq.jpg" alt="1"></p><a id="more"></a><h2 id="解决联网验证"><a href="#解决联网验证" class="headerlink" title="解决联网验证"></a>解决联网验证</h2><p>SmallPDF 安装之后需要联网验证，否则一直卡在这个界面。</p><p><img src="https://ws1.sinaimg.cn/large/841aea59ly1g24qqhygp7j20mo0gmjrx.jpg" alt="3"></p><p>SmallPDF 在配置文件<code>C:\Users\{user}\AppData\Roaming\Smallpdf\preferences.json</code>中储存配置，其中<code>{user}</code>是你的计算机用户名。</p><p>如果你碰到了这种情况，打开配置文件，找到这一行，我这里大概是 13 行：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"system.local_token": null,</span><br></pre></td></tr></table></figure><p>把值改成<code>&quot;1&quot;</code>，然后给这个文件设为只读。</p><h2 id="解决试用期过期"><a href="#解决试用期过期" class="headerlink" title="解决试用期过期"></a>解决试用期过期</h2><p>打开配置文件，找到这一行，我这里大概是 44 行：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"system.trial_duration_limit": 5,</span><br></pre></td></tr></table></figure><p>把它改成 999999999999，然后给这个文件设为只读。</p><p>再打开应用程序，就发现可以用了：</p><p><img src="https://ws1.sinaimg.cn/large/841aea59ly1g24qqoqd3lj20ma0ge3z5.jpg" alt="2"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;特别感谢：&lt;a href=&quot;https://www.52pojie.cn/thread-899911-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;攻防之间&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;SmallPDF 是一款非常好用的 PDF 工具箱，具有压缩、格式转换、合并分割、解锁、保护等实用功能。它的在线版是完全免费的，但是文件传输很慢，桌面版完全在本地执行操作，免费试用 5 次。&lt;/p&gt;
+&lt;p&gt;首先确认一下版本，我的版本是 1.24.0，不保证这个方法以后还能用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/841aea59ly1g24qpwzg00j20a60950sq.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="应用" scheme="http://www.flygon.net/categories/应用/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>日漫归档 2018 BiliDrive 备份</title>
+    <link href="http://www.flygon.net/comic-2018-bilidrive/"/>
+    <id>http://www.flygon.net/comic-2018-bilidrive/</id>
+    <published>2018-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>&zwj;</p><a id="more"></a><script>location.href='http://it-ebooks.flygon.net'+location.pathname;</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;zwj;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>轻小说归档 2018 BiliDrive 备份</title>
+    <link href="http://www.flygon.net/lightnovel-2018-bilidrive/"/>
+    <id>http://www.flygon.net/lightnovel-2018-bilidrive/</id>
+    <published>2018-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>&zwj;</p><a id="more"></a><script>location.href='http://it-ebooks.flygon.net'+location.pathname;</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;zwj;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>轻小说汇总 2018</title>
+    <link href="http://www.flygon.net/lightnovel-2018/"/>
+    <id>http://www.flygon.net/lightnovel-2018/</id>
+    <published>2018-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>&zwj;</p><a id="more"></a><script>location.href='http://it-ebooks.flygon.net'+location.pathname;</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;zwj;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2018 总结 &amp; 2019 规划</title>
+    <link href="http://www.flygon.net/2019-%E8%A7%84%E5%88%92/"/>
+    <id>http://www.flygon.net/2019-%E8%A7%84%E5%88%92/</id>
+    <published>2018-12-07T12:02:56.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="2018-年成就"><a href="#2018-年成就" class="headerlink" title="2018 年成就"></a>2018 年成就</h2><p>我是一个非常不容易满足的人，我需要把成就列出来，丧的时候就看看自己有多优秀。</p><ol><li><p><a href="https://github.com/wizardforcel" target="_blank" rel="noopener">Github 5k 粉丝</a>，<a href="http://githubrank.com/" target="_blank" rel="noopener">中国区 top50</a>。真的很感谢 <a href="https://apachecn.org" target="_blank" rel="noopener">ApacheCN</a> 的各位，感谢你们的推荐和贡献。</p></li><li><p><a href="https://blog.csdn.net/wizardforcel" target="_blank" rel="noopener">CSDN 博客 top100</a>，386 万+访问。我的策略是大量翻译东西，因为翻译比原创更省脑力，并且用量变产生质变。</p></li><li><p>翻译并组织翻译了很多作品：</p><p>翻译：</p><ul><li><a href="https://github.com/wizardforcel/think-comp-2e-zh" target="_blank" rel="noopener">复杂性思维第二版</a></li><li><a href="https://github.com/wizardforcel/eloquent-js-3e-zh" target="_blank" rel="noopener">JavaScript 编程精解第三版</a></li><li><a href="https://github.com/apachecn/scipycon-2018-sklearn-tut-zh" target="_blank" rel="noopener">SciPyCon 2018 Sklearn 教程（短篇）</a></li><li><a href="https://github.com/apachecn/learning-tf-zh" target="_blank" rel="noopener">TensorFlow 学习指南（短篇）</a></li><li><a href="https://github.com/apachecn/fastai-num-linalg-v2-zh" target="_blank" rel="noopener">fast.ai 数值线性代数讲义 v2（短篇）</a></li><li><a href="https://github.com/apachecn/ds-ai-tech-notes" target="_blank" rel="noopener">数据科学和人工智能技术笔记（短篇）</a></li></ul><p>组织翻译：</p><ul><li><a href="https://github.com/apachecn/pytorch-doc-zh" target="_blank" rel="noopener">pytorch 中文文档</a></li><li><a href="https://github.com/apachecn/hands_on_Ml_with_Sklearn_and_TF" target="_blank" rel="noopener">Sklearn 与 TensorFlow 机器学习实用指南</a></li><li><a href="https://github.com/apachecn/feature-engineering-for-ml-zh" target="_blank" rel="noopener">面向机器学习的特征工程</a></li><li><a href="https://github.com/apachecn/prob140-textbook-zh" target="_blank" rel="noopener">UCB Prob140 课本：面向数据科学的概率论</a></li><li><a href="https://github.com/apachecn/airflow-doc-zh" target="_blank" rel="noopener">Airflow 中文文档</a></li></ul><p>再次感谢社区的各位，没有你们的贡献就没有这么多好的作品。</p></li></ol><h2 id="没有做成的事情"><a href="#没有做成的事情" class="headerlink" title="没有做成的事情"></a>没有做成的事情</h2><p>四个规划之中，两个未完成，一个已经放弃了。</p><ol><li>搞 Quant。这个可能是忘了（逃。</li><li>打 Kaggle。我的时间花在毕业论文以及 ApacheCN 的翻译活动上，没有时间带领大家打比赛。只能等到翻译活动不是那么多了再说吧。</li><li>看完<a href="https://www.52pojie.cn/thread-526618-1-1.html" target="_blank" rel="noopener">郁金香商业辅助教程</a>。因为我不继续搞安全了，就放弃了。</li></ol><h2 id="2019-规划"><a href="#2019-规划" class="headerlink" title="2019 规划"></a>2019 规划</h2><ol><li><p>【√】增肥 20 斤。<code>BMI = 75 / 1.82 ** 2 = 22.6 (正常)</code></p></li><li><p>【√】至少一个 Kaggle 银牌（或者其它比赛的 5%）。</p></li><li><p>【√】至少四个翻译项目。</p></li><li><p>【X】实现 10% 收益的 Quant 算法。</p></li><li><p>【X】找到接单途径，实现财务自由。</p></li><li><p>【X】遇见自己的爱情。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;2018-年成就&quot;&gt;&lt;a href=&quot;#2018-年成就&quot; class=&quot;headerlink&quot; title=&quot;2018 年成就&quot;&gt;&lt;/a&gt;2018 年成就&lt;/h2&gt;&lt;p&gt;我是一个非常不容易满足的人，我需要把成就列出来，丧的时候就看看自己有多优秀。&lt;/p&gt;
+&lt;ol</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>解除 Chrome 扩展安装的限制</title>
+    <link href="http://www.flygon.net/%E8%A7%A3%E9%99%A4-chrome-%E6%89%A9%E5%B1%95%E5%AE%89%E8%A3%85%E7%9A%84%E9%99%90%E5%88%B6/"/>
+    <id>http://www.flygon.net/%E8%A7%A3%E9%99%A4-chrome-%E6%89%A9%E5%B1%95%E5%AE%89%E8%A3%85%E7%9A%84%E9%99%90%E5%88%B6/</id>
+    <published>2018-11-14T15:46:00.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>找到或创建 Chrome 的快捷方式，转到属性页面，在目标中添加<code>--enable-easy-off-store-extension-install</code>。注意，参数放在引号外面，和引号之间有个空格。</p><p><img src="https://ww2.sinaimg.cn/bmiddle/841aea59ly1fww3aufsjcj20e509zdfw.jpg" alt></p></li><li><p>用这个快捷方式打开 Chrome，访问扩展程序页面（<code>chrome://extensions/</code>），把扩展拖进去就能安装了。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;找到或创建 Chrome 的快捷方式，转到属性页面，在目标中添加&lt;code&gt;--enable-easy-off-store-extension-install&lt;/code&gt;。注意，参数放在引号外面，和引号之间有个空格。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;h</summary>
+      
+    
+    
+    
+    <category term="应用" scheme="http://www.flygon.net/categories/应用/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>轻小说归档 2014~2017 BiliDrive 备份</title>
+    <link href="http://www.flygon.net/lightnovel-2014-2017-bilidrive/"/>
+    <id>http://www.flygon.net/lightnovel-2014-2017-bilidrive/</id>
+    <published>2017-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>&zwj;</p><a id="more"></a><script>location.href='http://it-ebooks.flygon.net'+location.pathname;</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;zwj;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>轻小说汇总 2014-2017</title>
+    <link href="http://www.flygon.net/lightnovel-2014-2017/"/>
+    <id>http://www.flygon.net/lightnovel-2014-2017/</id>
+    <published>2017-12-31T23:59:59.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>&zwj;</p><a id="more"></a><script>location.href='http://it-ebooks.flygon.net'+location.pathname;</script>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&amp;zwj;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSDN 重复文件上传限制的解决办法</title>
+    <link href="http://www.flygon.net/CSDN-%E9%87%8D%E5%A4%8D%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E9%99%90%E5%88%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://www.flygon.net/CSDN-%E9%87%8D%E5%A4%8D%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E9%99%90%E5%88%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2017-12-09T14:39:40.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<p>CSDN 最近限制了重复文件。如果有人已经上传了某个文件，再次上传会失败：</p><p><img src="http://ww1.sinaimg.cn/large/841aea59gy1fmai6vf6idj20td07ggll.jpg" alt></p><p>有的时候打了压缩包还是没用，那么，可以试试添加个注释。</p><p>比如说，我这里有个压缩包。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">文件: C:\Users\asus\Desktop\《SciPy and NumPy》中文精要.7z</span><br><span class="line">大小: 1353887 字节</span><br><span class="line">修改时间: 2017年12月9日, 14:30:01</span><br><span class="line">MD5: E8597649E8EBA0797237CF82C03A843C</span><br><span class="line">SHA1: 60CBCC9F43E56F1DE8EC0178066807850E415083</span><br><span class="line">CRC32: 2B058995</span><br></pre></td></tr></table></figure><p>给它加点注释，就用当前日期和时间好了，这个肯定没有人会和你重复。</p><p><img src="http://ww1.sinaimg.cn/large/841aea59gy1fmai762l09j20rm0h23zs.jpg" alt></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">文件: C:\Users\asus\Desktop\《SciPy and NumPy》中文精要.7z</span><br><span class="line">大小: 1353904 字节</span><br><span class="line">修改时间: 2017年12月9日, 14:32:02</span><br><span class="line">MD5: ECCB7BF037BFCFDC435285B249F265FD</span><br><span class="line">SHA1: A1ECDA73375F5AFABD1AD0479195EB499D5B7270</span><br><span class="line">CRC32: F91C16EC</span><br></pre></td></tr></table></figure><p>校验值就完全变了，系统会把它看成不同的文件。</p><p>此外，这个方式也能躲过根据校验值的文件屏蔽。如果文件过大压缩过程较慢，可以设置为<code>Store</code>方式。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;CSDN 最近限制了重复文件。如果有人已经上传了某个文件，再次上传会失败：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/841aea59gy1fmai6vf6idj20td07ggll.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;有的时候</summary>
+      
+    
+    
+    
+    <category term="应用" scheme="http://www.flygon.net/categories/应用/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2018 规划</title>
+    <link href="http://www.flygon.net/2018-%E8%A7%84%E5%88%92/"/>
+    <id>http://www.flygon.net/2018-%E8%A7%84%E5%88%92/</id>
+    <published>2017-12-02T12:02:56.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>【X】搞 Quant</p></li><li><p>【X】打 Kaggle</p></li><li><p>【X】翻译一些机器学习应用于其它领域的资料：机器量化、社会计算、法律计算、数字人文、生物信息、医疗大数据等。</p></li><li><p>【X】看完<a href="https://www.52pojie.cn/thread-526618-1-1.html" target="_blank" rel="noopener">郁金香商业辅助教程</a>。</p></li><li><p>没了</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;【X】搞 Quant&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;【X】打 Kaggle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;【X】翻译一些机器学习应用于其它领域的资料：机器量化、社会计算、法律计算、数字人文、生物信息、医疗大数据等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>传说中的南邮 SS 嗅探算法</title>
+    <link href="http://www.flygon.net/nanyou-ss-sniffing/"/>
+    <id>http://www.flygon.net/nanyou-ss-sniffing/</id>
+    <published>2017-10-08T14:11:37.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>以后所有某墙相关的东西都在这个仓库里：</p></blockquote><blockquote><ul><li><a href="https://github.com/258ch/sniffing-research" target="_blank" rel="noopener">Github</a></li><li><a href="https://gitee.com/wizardforcel/sniffing-research" target="_blank" rel="noopener">Gitee</a></li></ul></blockquote><p>这就是传说中的南邮 SS 嗅探算法：</p><p><a href="https://www.google.com/patents/CN105281973A?cl=zh&amp;hl=zh-CN" target="_blank" rel="noopener">一种针对特定网站类别的网页指纹识别方法 CN 105281973 A（谷歌专利检索）</a></p><p>为了照顾没有梯子的同学，将其保存到内网一份：</p><p><a href="http://download.csdn.net/download/wizardforcel/10010817" target="_blank" rel="noopener">PDF 格式下载</a></p><p>目前没有 GFW 何时更新的消息，并且这个算法也不一定被使用，不过防患于未然总是好的。</p><p>我简单扫了一眼：</p><blockquote><p>[0047]在实际环境下应用该方法时，由于存在大量商业匿名通信工具和浏览器，本发明 选取shadowocks翻墙软件以及chrome浏览器进行说明。如图3所示，首先目标通过使用 shadowsocks翻墙工具访问浏览境外网站，shadowsocks工具连接到远端SOCKS代理服务 器，并使用chrome浏览器，此时shadowsocks工具在目标用户和远端代理服务器之间建立 了一个匿名加密通信信道，该信道通过某个监控者可控的交换设备，该交换设备被配置有 镜像端口，可由监控者抓取目标用户的流量数据，监控者通过从流量数据中提取出相应的 网页加载数据，并对其进行分析。其中，监控者与目标用户处于相同的通信链路环境，目标 所产生的流量数据可被监控方获取，流量数据载荷部分被加密。本发明基于该环境依据如 图1所示的方法流程进行工作，具体的分析步骤包括：</p></blockquote><blockquote><p>[0048] 步骤1:监控者通过利用可控交换设备使用数据采集工具进行数据收集，包括目 标数据收集和训练数据收集。目标数据收集主要是通过数据采集工具对目标浏览网站的流 量数据进行收集，并从流量中提取出网页加载流量。训练数据收集主要是监控者使用浏览 器访问目标可能会浏览的网站并在通信链路上收集并提取出相应网站的网页加载流量，其 中每个网站分别使用4种不同的浏览器操作方式对其进行访问，每种浏览器操作方式分别 收集10次指纹数据。指纹数据由数据采集工具导入至CSV文件中，在每个指纹数据记录了 一次网页加载过程中浏览器与远端Web服务器间所有的流量活动，这些指纹数据由一些系 列TCP数据包构成，由于加密技术的影响无法得到TCP数据包载荷部分的信息，其余TCP数 据包信息的数据结构包括：数据包序号、数据包传输时间、源IP地址、目的IP地址、数据包 大小以及数据包描述。</p></blockquote><blockquote><p>[0049] 步骤2:收集完指纹数据后，需要对其进行数据预处理操作。指纹数据中的TCP数 据中含有大量的协议控制数据，这些协议控制数据主要用于控制TCP数据的建立和断开， 除此之外原始的指纹数据中还包含有其它的冗余和噪音数据，包括：TCP重传数据包以及 TCP坏包。本案例将shadowsocks指纹数据中数据包大小小于70的数据包视为协议控制数 据包予以清除，并将数据包描述中含有”Retransmission”，”Dup”，”0ut-〇f-〇rder”描述字 段的数据包视为坏包和重传数据包予以清除。</p></blockquote><p>可以看到它简单将包长度作为特征进行提取，这个在特征工程中是相当不可靠的，可以用混淆轻易绕过。</p><p>进一步的发现，以及反制措施，我研究透彻之后就会发布。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;以后所有某墙相关的东西都在这个仓库里：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/258ch/sniffing-research&quot; target=&quot;_bl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>sublime text 3 3143 license</title>
+    <link href="http://www.flygon.net/sublime-text-3-3143-license/"/>
+    <id>http://www.flygon.net/sublime-text-3-3143-license/</id>
+    <published>2017-09-14T11:11:15.000Z</published>
+    <updated>2022-02-01T06:03:47.203Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">TwitterInc</span><br><span class="line">200 User License</span><br><span class="line">EA7E-890007</span><br><span class="line">1D77F72E 390CDD93 4DCBA022 FAF60790</span><br><span class="line">61AA12C0 A37081C5 D0316412 4584D136</span><br><span class="line">94D7F7D4 95BC8C1C 527DA828 560BB037</span><br><span class="line">D1EDDD8C AE7B379F 50C9D69D B35179EF</span><br><span class="line">2FE898C4 8E4277A8 555CE714 E1FB0E43</span><br><span class="line">D5D52613 C3D12E98 BC49967F 7652EED2</span><br><span class="line">9D2D2E61 67610860 6D338B72 5CF95C69</span><br><span class="line">E36B85CC 84991F19 7575D828 470A92AB</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>膜拜 @hhh0578 大神</title>
+    <link href="http://www.flygon.net/%E8%86%9C%E6%8B%9C-hhh0578-%E5%A4%A7%E7%A5%9E/"/>
+    <id>http://www.flygon.net/%E8%86%9C%E6%8B%9C-hhh0578-%E5%A4%A7%E7%A5%9E/</id>
+    <published>2017-04-01T21:33:55.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>你们看 RE0 小说的时候，注意到 3~9 卷都是一个人翻译的嘛？</p><p>第三卷：<a href="https://tieba.baidu.com/p/4216390431" target="_blank" rel="noopener">https://tieba.baidu.com/p/4216390431</a><br>第四卷：<a href="https://tieba.baidu.com/p/4225689196" target="_blank" rel="noopener">https://tieba.baidu.com/p/4225689196</a><br>第五卷：<a href="https://tieba.baidu.com/p/4309263284" target="_blank" rel="noopener">https://tieba.baidu.com/p/4309263284</a><br>第六卷：<a href="https://tieba.baidu.com/p/4380341503" target="_blank" rel="noopener">https://tieba.baidu.com/p/4380341503</a><br>第七卷：<a href="https://tieba.baidu.com/p/4439329155" target="_blank" rel="noopener">https://tieba.baidu.com/p/4439329155</a><br>第八卷：<a href="https://tieba.baidu.com/p/4506247213" target="_blank" rel="noopener">https://tieba.baidu.com/p/4506247213</a><br>第九卷：<a href="https://tieba.baidu.com/p/4881973371" target="_blank" rel="noopener">https://tieba.baidu.com/p/4881973371</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;你们看 RE0 小说的时候，注意到 3~9 卷都是一个人翻译的嘛？&lt;/p&gt;
+&lt;p&gt;第三卷：&lt;a href=&quot;https://tieba.baidu.com/p/4216390431&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://tieba.</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于国内厂商的国际版杀毒软件</title>
+    <link href="http://www.flygon.net/%E5%9B%BD%E5%86%85%E5%8E%82%E5%95%86%E7%9A%84%E5%9B%BD%E9%99%85%E7%89%88%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6/"/>
+    <id>http://www.flygon.net/%E5%9B%BD%E5%86%85%E5%8E%82%E5%95%86%E7%9A%84%E5%9B%BD%E9%99%85%E7%89%88%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6/</id>
+    <published>2017-03-30T16:00:31.000Z</published>
+    <updated>2022-02-01T06:03:47.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>很多国内软件公司的杀毒软件都分为国内版和国际版，这二者有什么区别呢？</p><p>首先，这两个的团队是不一样的。国际版的团队大多收购，国内版为自研。例如百度杀毒的国际版就是原超级巡警的团队做的，而国内版是自己另起炉灶。</p><p>其次，由于国外良好的用户环境和监管，国际版的软件体验良好，没有流氓或者窃取隐私的行为。</p><p>然而它们都是免费的。所以推荐大家使用这些国际版的杀软。不用国内版的软件，也算是为净化国内的互联网环境出了一份力。如果你之前拉黑了国内版的证书也没有关系，二者的证书是不一样的。</p><ul><li><a href="http://www.pcfaster.com/zhtw/" target="_blank" rel="noopener">Baidu PC Faster（百度安全卫士国际版）</a></li><li><a href="http://antivirus.baidu.com/zh/" target="_blank" rel="noopener">Baidu Antivirus（百度杀毒软件国际版）</a></li><li><a href="http://www.pcmgr-global.com/" target="_blank" rel="noopener">Tencent PC Manager（腾讯电脑管家国际版）</a></li><li><a href="https://www.360totalsecurity.com/zh-cn/features/360-total-security/" target="_blank" rel="noopener">360 Total Security（360 安全卫士国际版）</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;很多国内软件公司的杀毒软件都分为国内版和国际版，这二者有什么区别呢？&lt;/p&gt;
+&lt;p&gt;首先，这两个的团队是不一样的。国际版的团队大多收购，国内版为自研。例如百度杀毒的国际版就是原超级巡警的团队做的，而国内版是自己另起炉灶。&lt;/p&gt;
+&lt;p&gt;其次，由于国外良好的用户环境和监管，国</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

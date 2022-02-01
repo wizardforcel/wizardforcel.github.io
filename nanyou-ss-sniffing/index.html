@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta name="referrer" content="never">
+  
+  
+  <meta name="description" content="一个独立开发者的博客。吾名飞龙。">
+  
+
+  
+  <meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+  
+  
+  <meta name="google-site-verification" content="NCXVSqxqB-os803-VFMtIEd1SUNJVOIjctCfNYUwD0w">
+  <meta name="baidu-site-verification" content="Nzwx7HuplM">
+  
+  <meta name="msvalidate.01" content="9E9EA92F7E5327E1FE8A5196D5253664">
+  
+  
+  
+  <title>传说中的南邮 SS 嗅探算法 | 龙哥盟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="以后所有某墙相关的东西都在这个仓库里：    Github Gitee   这就是传说中的南邮 SS 嗅探算法： 一种针对特定网站类别的网页指纹识别方法 CN 105281973 A（谷歌专利检索） 为了照顾没有梯子的同学，将其保存到内网一份： PDF 格式下载 目前没有 GFW 何时更新的消息，并且这个算法也不一定被使用，不过防患于未然总是好的。 我简单扫了一眼：  [0047]在实际环境下应">
+<meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="传说中的南邮 SS 嗅探算法">
+<meta property="og:url" content="http://www.flygon.net/nanyou-ss-sniffing/index.html">
+<meta property="og:site_name" content="龙哥盟">
+<meta property="og:description" content="以后所有某墙相关的东西都在这个仓库里：    Github Gitee   这就是传说中的南邮 SS 嗅探算法： 一种针对特定网站类别的网页指纹识别方法 CN 105281973 A（谷歌专利检索） 为了照顾没有梯子的同学，将其保存到内网一份： PDF 格式下载 目前没有 GFW 何时更新的消息，并且这个算法也不一定被使用，不过防患于未然总是好的。 我简单扫了一眼：  [0047]在实际环境下应">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2022-02-01T06:03:47.203Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="传说中的南邮 SS 嗅探算法">
+<meta name="twitter:description" content="以后所有某墙相关的东西都在这个仓库里：    Github Gitee   这就是传说中的南邮 SS 嗅探算法： 一种针对特定网站类别的网页指纹识别方法 CN 105281973 A（谷歌专利检索） 为了照顾没有梯子的同学，将其保存到内网一份： PDF 格式下载 目前没有 GFW 何时更新的消息，并且这个算法也不一定被使用，不过防患于未然总是好的。 我简单扫了一眼：  [0047]在实际环境下应">
+  
+    <link rel="alternative" href="/atom.xml" title="龙哥盟" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7u2hdm.com1.z0.glb.clouddn.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="龙哥盟" rel="home">龙哥盟</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">英特纳雄耐尔，就一定要实现。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://home.apachecn.org/info/">ApacheCN</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://it-ebooks.flygon.net/">布客新知</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/works">作品集</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/donors">捐赠名单</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/about">关于我</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/atom.xml">RSS</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://github.com/wizardforcel/blog">fork me on github</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-nanyou-ss-sniffing" class="post-nanyou-ss-sniffing post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      传说中的南邮 SS 嗅探算法
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/nanyou-ss-sniffing/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://www.flygon.net/nanyou-ss-sniffing/" data-id="ckz3ptvb8003qb8q1k3623yyh" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <blockquote>
+<p>以后所有某墙相关的东西都在这个仓库里：</p>
+</blockquote>
+<blockquote>
+<ul>
+<li><a href="https://github.com/258ch/sniffing-research" target="_blank" rel="noopener">Github</a></li>
+<li><a href="https://gitee.com/wizardforcel/sniffing-research" target="_blank" rel="noopener">Gitee</a></li>
+</ul>
+</blockquote>
+<p>这就是传说中的南邮 SS 嗅探算法：</p>
+<p><a href="https://www.google.com/patents/CN105281973A?cl=zh&amp;hl=zh-CN" target="_blank" rel="noopener">一种针对特定网站类别的网页指纹识别方法 CN 105281973 A（谷歌专利检索）</a></p>
+<p>为了照顾没有梯子的同学，将其保存到内网一份：</p>
+<p><a href="http://download.csdn.net/download/wizardforcel/10010817" target="_blank" rel="noopener">PDF 格式下载</a></p>
+<p>目前没有 GFW 何时更新的消息，并且这个算法也不一定被使用，不过防患于未然总是好的。</p>
+<p>我简单扫了一眼：</p>
+<blockquote>
+<p>[0047]在实际环境下应用该方法时，由于存在大量商业匿名通信工具和浏览器，本发明 选取shadowocks翻墙软件以及chrome浏览器进行说明。如图3所示，首先目标通过使用 shadowsocks翻墙工具访问浏览境外网站，shadowsocks工具连接到远端SOCKS代理服务 器，并使用chrome浏览器，此时shadowsocks工具在目标用户和远端代理服务器之间建立 了一个匿名加密通信信道，该信道通过某个监控者可控的交换设备，该交换设备被配置有 镜像端口，可由监控者抓取目标用户的流量数据，监控者通过从流量数据中提取出相应的 网页加载数据，并对其进行分析。其中，监控者与目标用户处于相同的通信链路环境，目标 所产生的流量数据可被监控方获取，流量数据载荷部分被加密。本发明基于该环境依据如 图1所示的方法流程进行工作，具体的分析步骤包括：</p>
+</blockquote>
+<blockquote>
+<p>[0048] 步骤1:监控者通过利用可控交换设备使用数据采集工具进行数据收集，包括目 标数据收集和训练数据收集。目标数据收集主要是通过数据采集工具对目标浏览网站的流 量数据进行收集，并从流量中提取出网页加载流量。训练数据收集主要是监控者使用浏览 器访问目标可能会浏览的网站并在通信链路上收集并提取出相应网站的网页加载流量，其 中每个网站分别使用4种不同的浏览器操作方式对其进行访问，每种浏览器操作方式分别 收集10次指纹数据。指纹数据由数据采集工具导入至CSV文件中，在每个指纹数据记录了 一次网页加载过程中浏览器与远端Web服务器间所有的流量活动，这些指纹数据由一些系 列TCP数据包构成，由于加密技术的影响无法得到TCP数据包载荷部分的信息，其余TCP数 据包信息的数据结构包括：数据包序号、数据包传输时间、源IP地址、目的IP地址、数据包 大小以及数据包描述。</p>
+</blockquote>
+<blockquote>
+<p>[0049] 步骤2:收集完指纹数据后，需要对其进行数据预处理操作。指纹数据中的TCP数 据中含有大量的协议控制数据，这些协议控制数据主要用于控制TCP数据的建立和断开， 除此之外原始的指纹数据中还包含有其它的冗余和噪音数据，包括：TCP重传数据包以及 TCP坏包。本案例将shadowsocks指纹数据中数据包大小小于70的数据包视为协议控制数 据包予以清除，并将数据包描述中含有”Retransmission”，”Dup”，”0ut-〇f-〇rder”描述字 段的数据包视为坏包和重传数据包予以清除。</p>
+</blockquote>
+<p>可以看到它简单将包长度作为特征进行提取，这个在特征工程中是相当不可靠的，可以用混淆轻易绕过。</p>
+<p>进一步的发现，以及反制措施，我研究透彻之后就会发布。</p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/nanyou-ss-sniffing/">
+    <time datetime="2017-10-08T14:11:37.000Z" class="entry-date">
+        10月 8 2017
+    </time>
+</a>
+    
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/2018-规划/" rel="prev"><span class="meta-nav">←</span> 2018 规划</a></span>
+    
+    
+        <span class="nav-next"><a href="/sublime-text-3-3143-license/" rel="next">sublime text 3 3143 license <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-nanyou-ss-sniffing" data-title="传说中的南邮 SS 嗅探算法" data-url="http://www.flygon.net/nanyou-ss-sniffing/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'flhexo'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside class="widget">
+    <h3 class="widget-title">关于我</h3>
+    <div class="widget-content">
+      <p>邮箱：admin(at)flygon.net</p>
+      <p>QQ：562826179</p>
+      <iframe width="100%" height="110" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=0&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=1&uid=2216356441&verifier=2e06a95d&dpc=1"></iframe>
+      
+      <iframe width="100%" height="320" frameborder="0" scrolling="no" src="https://cdn.jsdelivr.net/github-cards/1.0.2/cards/medium.html?user=wizardforcel&identity=ghcard-wizardforcel-1"></iframe>
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">赞助我</h3>
+    <div class="widget-content">
+      <img src='/css/images/qr_alipay.png' style='width:100%;' />
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">公众号</h3>
+    <div class="widget-content">
+      <p>请关注我们的公众号，回复“教程/路线/比赛/报告/技术书/轻小说/漫画/新知”来获取更多资源：</p>
+      <p><img src='https://home.apachecn.org/img/about/gzh_qr.jpg' style='width:100%;background:rgba(255,255,255,0.6)' /></p>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="/asset/杀不死的SB%20-%20in3.aac" controls="controls"
+             loop="loop" style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+    <h3 class="widget-title">广告</h3>
+    <div class="widget-content">
+        <!-- google ads -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:250px;height:250px"
+             data-ad-client="ca-pub-3565452474788507"
+             data-ad-slot="9493159174"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/项目沉思录-1/">项目沉思录 1</a>
+          </li>
+        
+          <li>
+            <a href="/2022-规划/">2022 规划</a>
+          </li>
+        
+          <li>
+            <a href="/资本主义反抗指南精要-v0.1/">资本主义反抗指南精要（v0.1）</a>
+          </li>
+        
+          <li>
+            <a href="/2021-规划/">2021 规划</a>
+          </li>
+        
+          <li>
+            <a href="/2020-规划/">2020 规划</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget-content">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">七月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">一月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">十一月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">十月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">九月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">八月 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1899/11/">十一月 1899</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/公告/">公告</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用/">应用</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂记/">杂记</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">45</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站/">网站</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Invoke/" style="font-size: 10px;">Invoke</a> <a href="/tags/awvs/" style="font-size: 10px;">awvs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/csharp/" style="font-size: 15px;">csharp</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/safe3/" style="font-size: 10px;">safe3</a> <a href="/tags/sqlmap/" style="font-size: 15px;">sqlmap</a> <a href="/tags/sql注入/" style="font-size: 20px;">sql注入</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/多线程/" style="font-size: 15px;">多线程</a> <a href="/tags/密码/" style="font-size: 10px;">密码</a> <a href="/tags/生物劝退/" style="font-size: 10px;">生物劝退</a> <a href="/tags/编程/" style="font-size: 20px;">编程</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+<h3 class="widget-title">友情链接</h3>
+<div class="widget-content">
+<ul id='link-list'>
+<!-- link begin -->
+<li><a href="http://www.apachecn.org/">ApacheCN</a></li>
+<li><a href="http://www.258ch.com/">苍海国际</a></li>
+<li><a href="http://www.714.hk/">梦殇国际</a></li>
+<li><a href="http://cuican.name/">璀璨</a></li>
+<li><a href="http://www.giuem.com/">Giuem</a></li>
+<li><a href="http://www.woaiye.com/">我爱夜</a></li>
+<li><a href="http://moelove.info/">MoeLove</a></li>
+<li><a href='http://xiaohudie.net/'>小蝴蝶</a></li>
+<li><a href='http://www.wczf.net/'>微尘逐风</a></li>
+<li><a href='http://cyto.top/'>Cytosine</a></li>
+<li><a href='https://cismon.net/'>Pensieve</a></li>
+<li><a href="http://gaocegege.com/Blog/">高策</a></li>
+<li><a href='http://zhangwenli.com/blog/'>羡辙杂俎</a></li>
+<li><a href="http://www.geekzu.cn/">极客族</a></li>
+<li><a href="http://hardrain980.com">骤雨</a></li>
+<li><a href="http://lolil.lofter.com/">庭园</a></li>
+<li><a href="http://www.sunweihu.com/">墨涩网</a></li>
+<li><a href='http://lvycf.com'>HDL</a></li>
+<li><a href='http://www.farquer.cn/'>farquer</a></li>
+<li><a href='https://loveincode.cnblogs.com/'>loveincode</a></li>
+<li><a href='https://minemine.cc/'>Minemine</a></li>
+<!-- link end -->
+</ul>
+</div>
+<script>
+    // links shuffle
+    document.addEventListener('DOMContentLoaded', evt => {
+        var linkUl = document.querySelector('#link-list');
+        var links = document.querySelectorAll('#link-list li');
+        links = Array.from(links);
+        links.forEach(x => x.remove());
+        var len = links.length;
+        for(var i = 0; i < len; i++) {
+            var r = Math.floor(Math.random() * links.length);
+            linkUl.append(links[r]);
+            links.splice(r, 1);
+        }
+    });
+</script>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">统计</h3>
+    <div class="widget-content">
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000045945'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000045945%26online%3D1' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+</aside>
+
+  
+    <script>
+    // sub title
+    var subtitleList = [
+        "『卑鄙是卑鄙者的通行证，高尚是高尚者的墓志铭。』——北岛",
+        "『坦白从宽牢底坐穿，抗拒从严回家过年。』",
+        "『所有模型都是错的，但其中一些是有用的。』",
+        "『程序员的双手是魔术师的双手，他们把枯燥无味的代码变成了丰富多彩的软件。』——《疯狂的程序员》",
+        "『质疑计算机能不能思考，就相当于质疑潜艇能不能游泳。』——Edsger Dijkstra",
+        "人们认为计算机科学是天才的艺术，但是实际情况相反，只是许多人在其它人基础上做一些东西，就像一面由石子垒成的墙。』——高德纳",
+        "『Stay young. Stay simple. Always naive!』",
+        "『你们媒体千万要记着，不要「见得风，是得雨」。接到消息，你们媒体本身也要判断。』——长者",
+        "『假设这些完全无中生有的东西，你再帮他说一遍，你等于......你也有责任吧？』——长者",
+        "『刚才你问我啊，我可以回答你一句「无可奉告」。』——长者",
+        "『我告诉你们我是身经百战了，见得多了！』——长者",
+        "『美国的华莱士，比你们不知要高到哪里去了，我跟他谈笑风生。』——长者",
+        "『我有这个必要告诉你们一点，人生的经验。』——长者",
+        "『我没有说要钦定，没有任何这个意思。』——长者",
+        "『你们啊，不要想喜欢弄个大新闻，说现在已经钦定了，就把我批判一番。』——长者",
+        "『一个人的命运啊，当然要靠自我奋斗，但是也要考虑历史的进程。』——长者",
+        "『我说另请高明吧，我实在也不是谦虚。』——长者",
+        "『苟利国家生死以，岂因祸福避趋之。』——林则徐",
+        "『敢同恶鬼争高下，不向霸王让寸分。』——毛泽东",
+        "『我生不为逐鹿来，都门懒筑黄金台。状元百官都如狗，总是刀下觳觫材。』——张献忠",
+        "『我自成佛自度我，佛度凡尘我度佛。』",
+        "『龙吟九天，一曲焚尘；苍山听雪，归时余几人。』",
+        "『人最大的痛苦就是说一些自己都不相信的话。』",
+        "『燃琴为薪，铸银矢以射白羽；斑音成竹，裁短笛而驭青龙。』",
+        "『我们在人生的每个阶段，能影响多少人，就影响多少人，哪怕只能影响一个人，也好过不影响。』——罗永浩",
+        "『每个人心中都有一个死小孩。』——《龙族II》",
+        "『前面是山，我们就爬山；前面是海，我们就渡海；前面是皇宫，我们就开炮！』——《龙族前传》",
+        "『不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意；不要嘲讽那些比自己更勇敢热情的人们。我们可以卑微如尘土，不可扭曲如蛆虫。』——季业",
+    ];
+    
+    document.addEventListener('DOMContentLoaded', evt => {
+        var i = Math.floor(Math.random() * subtitleList.length);
+        document.querySelector('#subtitle').innerText = subtitleList[i];
+    });
+
+    //Kill XP and IE8
+    (function(){
+        var ua = navigator.userAgent;
+        var res = /Windows NT (\d+\.\d+)/.exec(ua);
+        var xpOrLower = res && JSON.parse(res[1]) < 6;
+        res = /MSIE (\d+\.\d+)/.exec(ua);
+        var ie8OrLower = res && JSON.parse(res[1]) < 9;
+        if(xpOrLower || ie8OrLower) {
+            alert('请不要用XP及之前的Windows系统，和IE8及之前的IE浏览器访问本站！');
+            location.href = "about:blank";
+        }
+        var fromBaiduSE = /^https?:\/\/www.baidu.com/.test(document.referrer);
+        if(fromBaiduSE) {
+            alert('检测到你还在使用百度搜索，作为一个程序员，这是一种自暴自弃！\n\n做不作恶的程序员，从不用百度开始！');
+            location.href = "about:blank";
+        }
+    })();
+</script>
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2022 Flygon; All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>

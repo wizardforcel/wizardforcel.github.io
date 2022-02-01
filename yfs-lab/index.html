@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta name="referrer" content="never">
+  
+  
+  <meta name="description" content="一个独立开发者的博客。吾名飞龙。">
+  
+
+  
+  <meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+  
+  
+  <meta name="google-site-verification" content="NCXVSqxqB-os803-VFMtIEd1SUNJVOIjctCfNYUwD0w">
+  <meta name="baidu-site-verification" content="Nzwx7HuplM">
+  
+  <meta name="msvalidate.01" content="9E9EA92F7E5327E1FE8A5196D5253664">
+  
+  
+  
+  <title>yfs lab 总结 | 龙哥盟</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="首先说明，这篇日志是写给F12的同学的，所以其他人可以无视掉了。本科CSE课程，和研究生CSP课程，在B12、F11、B13都用的是这个作业，F12的作业很可能仍然是这套题目。虽然可能会有一些改动，但是差不多还是这样。（但可以肯定的是到了B14修这门课程的时候课程会有较大的改动，因为B14会和F11一起修这门课）。这个大作业是抄自MIT分布式计算课程的大作业的。正如有的同学在课程最后的调查中说的那">
+<meta name="keywords" content="龙哥盟,贴吧工具,神意工具箱,神意,梅嘉斯之门,北狗之撸,苍穹,盖楼机,召唤机,扫号机,刷粉,刷签到,刷会员,一键签到,贴吧签到助手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yfs lab 总结">
+<meta property="og:url" content="http://www.flygon.net/yfs-lab/index.html">
+<meta property="og:site_name" content="龙哥盟">
+<meta property="og:description" content="首先说明，这篇日志是写给F12的同学的，所以其他人可以无视掉了。本科CSE课程，和研究生CSP课程，在B12、F11、B13都用的是这个作业，F12的作业很可能仍然是这套题目。虽然可能会有一些改动，但是差不多还是这样。（但可以肯定的是到了B14修这门课程的时候课程会有较大的改动，因为B14会和F11一起修这门课）。这个大作业是抄自MIT分布式计算课程的大作业的。正如有的同学在课程最后的调查中说的那">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn061/20140120/0950/large_aQcJ_6492000060c8125d.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn062/20140120/0950/large_HP9U_556a000079da125f.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn057/20140120/1035/original_SgkP_560d00007aee125f.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn063/20140120/1050/original_WWk1_641000006206125d.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn065/20140120/1605/original_hm77_448700007345118c.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn060/20140120/2100/original_gsMl_643000006f6b125d.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn059/20140120/2100/original_QwDd_43d600007b14118c.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn064/20140120/2150/original_RYSH_1f8d00007c74118f.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn065/20140121/0030/original_Mkyt_558a00009445125f.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn064/20140121/0110/original_EhzL_1faf0000822e118f.jpg">
+<meta property="og:image" content="http://fmn.rrimg.com/fmn057/20140121/0135/original_V4dU_2dc1000269fb118e.jpg">
+<meta property="og:updated_time" content="2022-02-01T06:03:47.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yfs lab 总结">
+<meta name="twitter:description" content="首先说明，这篇日志是写给F12的同学的，所以其他人可以无视掉了。本科CSE课程，和研究生CSP课程，在B12、F11、B13都用的是这个作业，F12的作业很可能仍然是这套题目。虽然可能会有一些改动，但是差不多还是这样。（但可以肯定的是到了B14修这门课程的时候课程会有较大的改动，因为B14会和F11一起修这门课）。这个大作业是抄自MIT分布式计算课程的大作业的。正如有的同学在课程最后的调查中说的那">
+<meta name="twitter:image" content="http://fmn.rrimg.com/fmn061/20140120/0950/large_aQcJ_6492000060c8125d.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="龙哥盟" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7u2hdm.com1.z0.glb.clouddn.com/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <!-- baidu webmaster push -->
+  <script src="//push.zhanzhang.baidu.com/push.js"></script>
+</head></html>
+<body class="home blog custom-background custom-font-enabled single-author">
+  <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="/" title="龙哥盟" rel="home">龙哥盟</a>
+      </h1>
+      
+        <h2 class="site-description">
+          <a href="/" id="subtitle">英特纳雄耐尔，就一定要实现。</a>
+        </h2>
+      
+    </hgroup>
+
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle">菜单</button>
+            <a class="assistive-text" href="/#content" title="跳至内容">跳至内容</a><!--TODO-->
+            <div class="menu-main-container">
+                <ul id="menu-main" class="nav-menu">
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://home.apachecn.org/info/">ApacheCN</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://it-ebooks.flygon.net/">布客新知</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/works">作品集</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/donors">捐赠名单</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/about">关于我</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/atom.xml">RSS</a></li>
+                
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://github.com/wizardforcel/blog">fork me on github</a></li>
+                
+                </ul>
+            </div>
+    </nav>
+</header>
+      <div id="main" class="wrapper">
+        <div id="primary" class="site-content"><div id="content" role="main"><article id="post-yfs-lab" class="post-yfs-lab post type-post status-publish format-standard hentry">
+    <!---->
+
+      <header class="entry-header">
+        
+        
+  
+    <h1 class="entry-title article-title">
+      yfs lab 总结
+    </h1>
+  
+
+        
+        <div class="comments-link">
+            
+            <a href="/yfs-lab/#comments" class="leave-reply">评论</a>
+            
+            <a href="javascript:void(0);" data-url="http://www.flygon.net/yfs-lab/" data-id="ckz3ptvbz004xb8q1ypxa3urs" class="leave-reply bdsharebuttonbox" data-cmd="more">分享</a>
+        </div><!-- .comments-link -->
+      </header><!-- .entry-header -->
+
+    <div class="entry-content">
+      
+        <p>首先说明，这篇日志是写给F12的同学的，所以其他人可以无视掉了。<br>本科CSE课程，和研究生CSP课程，在B12、F11、B13都用的是这个作业，F12的作业很可能仍然是这套题目。虽然可能会有一些改动，但是差不多还是这样。（但可以肯定的是到了B14修这门课程的时候课程会有较大的改动，因为B14会和F11一起修这门课）。<br>这个大作业是抄自MIT分布式计算课程的大作业的。正如有的同学在课程最后的调查中说的那样，“题目都是你抄来的，为什么答案我不能抄呢？”大家还是要注意一下抄袭检测的问题的。简单地说就是抄没关系，但是不要完全照搬，记得改动改动（这个学名叫重构和混淆）。</p>
+<a id="more"></a>
+<h1 id="课程概述"><a href="#课程概述" class="headerlink" title="课程概述"></a>课程概述</h1><p>这门课一开始会感觉有些像ICS，毕竟他们实验室的课程都是这风格。课程覆盖的面比较广，但是讲的都很浅，所以就给人以“老师讲的很明白”，而且“课程内容很有趣”的感觉。但是如果课讲得太浅了，连小学同学都听的懂，那总不是个事情吧，所以当然要用英文来授课。因为讲课的范围太广了，很多细节就会一笔带过被大家无视掉，所以作业就又会给人以“虽然写作业很花时间，但是做完感觉还是很有收获”的感觉。最后为了考试分数能拉开档次，卷子的难度就会明显高于上课讲的东西，当然考完之后再给大家的卷面往上加加分数，大家也就不会有什么意见就对了。不过既然是为了考试成绩有区分度的，所以肯定加分的方式顶多是线性调整，开根乘十这种事情是绝对不会发生的啦。最后等成绩下来的时候才发现虽然被作业坑了一个学期，但是作业完全没有区分度，换句话说只有考试分数才是王道。<br>但是毕竟这门课程不是ICS，所以这门课程和ICS还是有很大不同的。大概的感觉就是这样：<br>ICS:<br><img src="http://fmn.rrimg.com/fmn061/20140120/0950/large_aQcJ_6492000060c8125d.jpg" alt><br>CSE:<br><img src="http://fmn.rrimg.com/fmn062/20140120/0950/large_HP9U_556a000079da125f.jpg" alt></p>
+<h1 id="配置开发环境"><a href="#配置开发环境" class="headerlink" title="配置开发环境"></a>配置开发环境</h1><p>那么，介(hei)绍(guo)了这门课程之后就来说说开发环境的问题吧。（其实这篇文章的主要内容已经结束了，大家可以Ctrl-W了。）个人推荐使用课程网站上提供的虚拟机作为开发环境，因为这样就省去了各种配置的麻烦。当然也有同学去配置去，这个看你喜好吧。<br>我用的是课程网站提供的虚拟机。不过在上面装了个gvim。然后在Windows上用Putty连接过去（为了安全起见请到官方网站上下载！Putty官方从未发布过中文版，如果你下载到中文版那么肯定是被嵌木马了），用Xming显示的gvim。<br>课程用git做的代码下载，不过我不怎么会用就是了，大概就按照作业说明里面给的那些步骤做就好了。<br>提交作业用的交大FTP，我是直接用WinSCP先把压缩包拷贝到Windows上，再FileZilla交作业的。</p>
+<h1 id="作业一-inode管理"><a href="#作业一-inode管理" class="headerlink" title="作业一 inode管理"></a>作业一 inode管理</h1><p>第一个作业不是从MIT的作业中抄来的，只是对他们的一个模块进行了改造之后的产物。这个作业是要求大家根据上课讲的文件系统的结构实现一个inode管理的程序。程序的架构如下：<br><img src="http://fmn.rrimg.com/fmn057/20140120/1035/original_SgkP_560d00007aee125f.jpg" alt><br>这个作业要完成的是红框里面标记的这部分。接口都给大家写好了，虽然是C++，但是明显该用引用的地方却在接口上写了一大堆指针。因为对于后面的程序来说，这个模块内部的接口实际上毫无意义（那为啥在h文件里面？），所以大家可以任意修改，只要上面被我标记为inodeManger2的那部分的接口不要动就好了。<br>程序先用一个大数组模拟了Disk，这点有点像ICS Lab6的感觉。只是ICS Lab6每次分配的数据是不定长的连续空间，而这次是用不相连的若干个定长的部分拼起来给用户用。Disk这层没什么要做的，允许用户对这个数组的每个分块进行读写操作。这些块的用途一般来如图：<br><img src="http://fmn.rrimg.com/fmn063/20140120/1050/original_WWk1_641000006206125d.jpg" alt><br>由于题目描述的不是很清楚，所以实际上怎么实现都是可以的，这里只是随便介绍一个方法吧，这个方法大概可以认为是推荐的办法，不过其实做成什么样都可以的吧。<br>其中最前面的SuperBlock可以直接无视。<br>记录块是否为空的部分每个比特用来标记对应的块是否被用了。如果被用了那么这个比特就会被标记为1，否则为0。位运算什么的大家ICS Lab1都玩过，所以没什么好废话的。这个对应上面BlockManager这一层的代码。因为其实不用考虑什么性能的问题，所以这个就只要按照要求做点与/或运算就好了。查找空闲块就是逐个块看是不是空闲就好了，也不用有什么高级的算法。不用担心分配完的问题。记得分配的时候或者从给文件存储用的那部分开始搜索，或者把前面都标记成已被占用，不要不小心把前面的块分配给用户了。<br>接下来是存储inode一块的代码，inodeManager本来是一个类，我这里为了解释清楚所以分成两个部分的。前面一部分是inode的分配、读写、释放。这部分和上面对块的操作没有什么大的不同。只是要注意inode的type (extent_protocal::type) 他有文件和文件夹两种，而inode当前为空闲这个是用0进行标记的，并没有写到那个type里面。所以建议大家在T_DIR = 1,的上一行加上个T_FREE = 0,什么的。当然还要把get_inode的逻辑改掉。<br>最后是第二部分的inode，这部分是对文件的新建、读写、删除操作。inode有个特别的逻辑是关于间接块的问题。inode中最后一个blocks是个间接块。建议大家把blocks[NDIRECT + 1];改成blocks[NDIRECT];和indirect两个变量，这样在操作的时候反而会方便很多。在读取了那个简介块之后，记得直接强制类型转换啥的把指针转换一下，当成块编号的数组来用。这一段代码可能多次要用到这个读写某个文件用了哪些块的操作，所以建议添加两个方法：把这个读写先写成两个函数来用。<br>测试程序不会测试任何这个框架所不支持的特性（比如数据量过大或过长）。所以事实上不必写任何错误处理的代码。但是为了自己调试方便，建议多使用一些assert：这样程序出错的时候可以方便调试。这段代码尤其要保证质量，因为后面的所有程序都要在这个代码的基础上写，所以尽量保证这个代码的正确。如果后面的作业调试出现问题，可以考虑调试的时候从网上找个正确的inode_manager替换自己写的，以检查是不是错在这里。</p>
+<h1 id="作业二-Fuse文件实现"><a href="#作业二-Fuse文件实现" class="headerlink" title="作业二 Fuse文件实现"></a>作业二 Fuse文件实现</h1><p>这个作业相当于CSE F11的作业一。从这个作业开始都是从MIT抄来的了，所以大家可以在网上找到一些现成的代码。（只要不被发现就不算抄袭哦！）不过还是建议大家不要抄袭。<br>这个程序的框架如下：<br><img src="http://fmn.rrimg.com/fmn065/20140120/1605/original_hm77_448700007345118c.jpg" alt><br>我们需要实现的是Fuse.cc和yfsClient这两部分。<br>这个lab拿来之后就多出来了很多东西，不过多出来的这几个文件还是很好理解的。extentServer、extentClient两个模块差不多就是把下面一层的接口又重新包装了一下，没有什么复杂的逻辑。所以不太影响对程序的理解。<br>这个程序运行出来的效果是我们实现了一个假的（运行于内存中的）文件系统。这个文件系统可以挂载到我们真正的文件系统中，从外部的表征上来看，除了效率低了一些，稳定性差了一些，功能少了一些，内存占用多了一些，关掉再开就都没了……之外，就差不多是个文件系统了啊～<br>测试的时候也是把他当作文件系统，进行了一些文件的增加删除等等操作。来看我们做的文件系统是不是正确。<br>Fuse.cc的作用是注册一些函数。用户在我们挂在的文件系统上操作的时候会调用到这些函数。这些函数的返回是基于回调机制的，而不是通过return返回的，而且一般是正确的时候调用一个回调函数，错误的时候调用另一个回调函数。这点是比较需要注意的地方。如果忘记调用了回调函数或者调用了错误的回调函数，可能会因为系统一直在等你的回调函数而无法继续进行下去导致程序死掉。所以如果在运行的时候发现程序死了，非常需要在这里检查一下。<br>Fuse.cc的所有操作差不多都是直接调用的下面一层，两个逻辑较为重复的部分是新建文件和新建文件夹，这里用 fuseserver_createhelper 来解决的。但是默认提供的 fuseserver_createhelper 中没有 type 参数，推荐的解决办法是自己添加一个type参数。<br>程序的主要逻辑都在 yfsClient 里面。我们 inodeManager 已经提供了文件的新建、读写和删除的操作。我们这一次还需要做的就是在这个基础上，支持路径。<br>支持路径的方法上课是介绍过的，其实也不难，就是表示文件夹的 inode 里面存储这个文件夹下面的所有文件或文件夹的名称和他们对应的 inode 。这样在解析路径的时候就可以一步一步解析到最后的文件了。这个递归的解析都是系统帮我们做好的，我们就只需要做其中的一层解析就好了。换句话说，我们需要做的事情就是：给一个文件夹，能列出来里面有哪些文件；给文件夹和文件名，能知道这个文件名对应的 inode 是多少；新建一个文件，在文件夹里面加上这个文件。就好了。<br>为了实现文件夹，我们要向文件夹里面存放文件名和inode的对应关系。这里建议使用 stringstream ，在写入的时候 ss &lt;&lt; filename &lt;&lt; “ “ &lt;&lt; inode_num &lt;&lt; “ “; 在读取的时候反过来 ss &gt;&gt; filename &gt;&gt; inode_num; 来解决问题，因为这样最简单方便。<br>有人会担心 filename 中有空格怎么办。不过好像测试数据中没有有空格的情况。如果你不放心文件名中是否有空格，可以对文件名做转义操作。我的字符串转义函数的实现就是对每个 char ，打印成两位的字母： string(“”) + (‘a’ + c / 16) +(‘a’ + c % 16) ；读取的时候再翻译回去 (c1 - ‘a’) <em> 16 + c2 - ‘a’ 。<br>不管你是否使用转义，不管你怎样实现文件夹的读写。都建议将文件夹读写变成两个函数，其包装后返回的参数是 std::map&lt;std::string, extent_protocol::extentid_t&gt; 的映射关系。这样做插入还是查找操作都很容易。（map的查找使用count方法，插入可以直接做下标访问，删除是erase）<br>对文件的写入操作涉及两个函数： setattr 和 write 。其中在写入的时候有比较复杂的要求：如果写入开始的偏移量 off 大于文件长度，那么这中间要用 ‘\0’ 补齐。然后再在 off 开始的 size 个字符上写新的数据 data 。 C++ 的 string 类的两个方法 resize 、 replace ，以及 string 的构造函数 string(char</em>, char<em>) 可以解决这个问题。 resize 在长度不够的时候默认就是补 ‘\0’ 的，所以不必再手动指定。 replace 可以将这个字符串从off开始的size个字符替换成另一个字符串。而用 string(data, data + size) 可以将 data 这个 char</em> 数组转换成 string 进行操作。<br>需要注意的问题是，虽然这里使用的表述虽然是“字符串”、“string”或者“char 数组”，但是这些字符串并不是以 ‘\0’ 结尾的。字符串的中间可能包含着’\0’字符。所以不要用 <cstring> 的相关函数进行操作，而是使用 memcpy, memset 配合长度进行操作，或者用 std::string 进行操作。<br>这个作业虽然分了几步，但是分的很混乱，所以建议大家不要看作业说明的先后顺序，而是整个把程序写掉再跑测试，不然可能反而更加纠结。<br>关于 yfsClient 中函数的组织，还是有一些要注意的地方的。<br>1. 前面说到的字符串读写最好弄成一对儿函数放在这里，因为可能有要用到好几次。<br>2. isfile函数建议给拆成 isfile 和 isdir 两个函数。<br>3. 最后暴露在外面做接口的几个函数之间尽量避免相互调用。（后面的作业有用）<br>4. 代码的参考长度是，如果可以省略花括号则省略，左花括号不起新行的话，每个函数差不多十行左右。<br>测试的时候，如果测试程序不能通过，不必每次都运行测试程序来调试，可以手动在命令行里面在 yfs 文件夹下做一些文件操作，这些文件操作都对应了程序中的相应代码。这样调试可以准确复现错误，而且可以让日志数量较少。<br>这个作业实现的部分后面虽然会有所修改，但是改动不大。这个作业作为后面作业的基础要仔细书写和调试。如果出现问题，后面可能会比较麻烦。<br>测试的时候要注意挂载 (mount) 是否成功，如果挂载失败，那么对文件系统的测试实际上是在对你电脑上 Linux 带的文件系统进行的测试，你会发现这货又快又稳定还没错，不过这对你写作业没什么太大的帮助。在挂载成功前后，ls显示yfs1文件夹的颜色会有所不同，注意一下。</cstring></p>
+<h1 id="作业三-远程过程调用和锁"><a href="#作业三-远程过程调用和锁" class="headerlink" title="作业三 远程过程调用和锁"></a>作业三 远程过程调用和锁</h1><p>这个作业相当于CSE F11的作业二。作业要求完善已有的关于远程过程调用的代码，并使用这个框架提供的RPC实现一个锁的服务器。<br><img src="http://fmn.rrimg.com/fmn060/20140120/2100/original_gsMl_643000006f6b125d.jpg" alt><br>之所以RPC是使用它们的代码，而不是正常的RPC，是因为这部分将来会被动各种手脚来测试丢包或者什么各种情况。<br>程序的总体架构如图所示，一个 lockServer ，跟着一堆 lockClient 。这些 lockServer 和 lockClient 之间通过 RPC 进行通讯。每个 lockServer 或者 lockClinet 都是一个独立的程序。但是因为测试的时候懒得开五个进程来测试了，所以大家不要把这两个类写成单例模式，按照作业要求的去写就好了。<br>我先介绍 RPC 这部分，这部分大部分代码是提供给我们的，虽然我们之后也要无数次遇到这些代码，但是索性都不用看，看了也没用。所以倒是没有什么阅读代码的负担。我们要做的是其中几个函数。这几个函数所做的事情是保证 RPC 执行且仅执行一次。<br>题目描述会告诉你这个有点像 TCP ，但是事实上远远不是这样。因为 TCP 是要保证顺序的，而我们的代码是不保证顺序的。特别要注意这点，我们的代码是不保证顺序的，所以我们允许14执行在13的前面这种事情发生。（这不会影响锁的逻辑的）<br>如果网络出错会有自动的重发。这个重发操作是由 RPC 模块完成的。注意区别 RPC 模块做的重发和我们自己写代码时候反复使用 RPC 的区别：每个 RPC 都有一个编号 xid ， RPC 模块做的重发中 xid 是不变的，但是我们反复使用 RPC 的话， xid 是会递增的。<br>checkduplicate_and_update 函数负责对收到的请求进行分类。分类的结果包括四类：NEW（从来没见过他，这时候要存下来当前请求的xid），INPROGRESS（这个请求见过，但是还没有处理完成；等处理完成的时候，会调用 add_reply 函数，那时候把处理结果保存下来就好了），DONE（已经处理完成了）和 FORGOTTEN（不单是处理完成了，因外太久远，已经不再保存对应的数据了，测试的时候不会发生）。<br>其中的参数 xid_rep ，不管 rep 是回复还是收割吧，总之就是说到这个 xid 和之前的所有数字都不再需要了。我们可以从 reply_window_[clt_nonce] 中删掉这些数据。但是我们没有额外的变量可以存储这个 xid_rep ，所以如果现在我们见到过了 [1, 2, 4, 5] 这几个 RPC，然后 xid_rep == 2，我们删掉前面的留下 [4, 5] 我们便无从得知是否曾经见到过3。一个解决办法是多留一个元素，例如上面的情况，里面保存的是[2, 4, 5]就不会有这个问题了。另一个解决办法是永远不说 FORGOTTEN 而是用 NEW 来回复。<br>这一部分作业说明说的不是很详细，按照这样的做法解决掉之后，就可以通过 ./rpc/rpctest 的测试了。因为代码不多，所以应该问题不大。这段代码以后也会一直用下去，所以比较重要，要仔细写。<br>实现了 RPC 之后，后面的所有架构的图里面就不再画 RPC 了，那些出了大方框的通讯就都是使用了 RPC 作为中介的通讯。<br>接下来是锁的实现。在完成了 RPC 部分之后，我们获得了一个将网络访问变成本地过程调用的抽象。我们要做的是在这个基础上实现一个锁的服务器。<br><img src="http://fmn.rrimg.com/fmn059/20140120/2100/original_QwDd_43d600007b14118c.jpg" alt><br>这时我们看看 RPC 提供给我们的接口。事实上， RPC 提供的是一组的模板函数，根据参数个数的不同，模板函数也稍有不同。这些函数都是最后一个参数用来传引用，其他的参数则是传值。<br>在把 RPC 当作过程调用的时候，要注意的一个问题是如果 RPC 调用的方法和那边定义的接口不匹配，是可以通过编译的，到了运行的时候才会出错。这点如果出错了，不知道的情况下可能会令人很费解。<br>我们要实现的有 acquire 和 release 两个函数。这段代码的逻辑很简单， acquire 获得一把锁，如果这个锁原来没见过，那么就新建一个；release 释放掉这把锁。<br>客户端找服务器要这把锁，但是这把锁在别的客户端那里，这是否服务器不要等那个客户端释放了锁再返回，而是直接告诉客户端你没拿到。然后那个客户端歇会儿再去找服务器要。<br>大家 ICS Lab10 用 up / down （P/V） 已经玩过锁之类的东西了。不过 P/V 毕竟太底层了，正常的还是 pthread_mutex 函数。在第七个作业之前（第七个可能没有的），只要会init、lock、unlock就够了，信号量什么的完全用不上。<br>实现的时候显然每个弄一把锁不是个事情，最简单的方法显然就是整个 lockServer 用一把锁锁起来，里面是个 std::map ，map里面存上当前这把锁在哪个 lockClient 那了。<br>不用考虑一个客户端拿着一把锁又继续要这把锁或者一个客户端拿了一把锁之后就不还了之类的各种情况。<br>这段代码很快就会作废掉，所以能过测试就好了，不用写的特别认真。<br>最后我们要在 yfsClient 中使用这个锁。代码组织如上面的图。其中 yfs_client 有两个，他们分别对应 yfs1 和 yfs2 两个文件夹。<br>两个程序共用一个 extent_server 所以两个目录下面看到的文件是相同的，一个目录里面有某个文件，那么另一个目录下面就也会有某个文件。一个目录中增加删除或者修改了某个文件，那么另一个目录里面也会随之变化。<br>我们要做的其实非常简单，在 yfsClient 中，要调用 extentClient 之前就给相应的函数上锁，用完再释放掉就好了。<br>实现的时候，刚才我已经说了，yfsClient 中实现的函数不要互相调用，这样做的目的就是现在写起来比较省事。两步：把 yfs_client 中所有对外的函数都重命名成 &lt;原名称&gt;_m 的函数名，如果有互相调用的地方，都改成调用这个带 _m 的版本。再新建一系列的函数，他们的名称就是没有 _m 的版本，这些函数做的事情就是，锁一个相同的全局锁，然后从 lockClient 得到这个 inode 为编号的锁，执行对应的操作，最后再逆向释放掉两把锁。<br>如果不出什么意外，这个测试应该很快就能通过的。如果测试出现问题，很可能是你的前面两个作业留下的祸根。自己看着办吧。<br>这段代码比较简单，应该不会有什么错误，不过还是那句话，这段代码后面会一直带着，所以还是要好好写的。而且因为多线程可能会有一些并发错误，所以测试程序务必多运行几次，好提早发现问题。</p>
+<h1 id="作业四-锁的缓存"><a href="#作业四-锁的缓存" class="headerlink" title="作业四 锁的缓存"></a>作业四 锁的缓存</h1><p>这个作业相当于CSE F11的作业三的前半部分。要求是将锁能够缓存以减少往复的RPC数。程序的架构和作业三的第二张图类似。<br><img src="http://fmn.rrimg.com/fmn064/20140120/2150/original_RYSH_1f8d00007c74118f.jpg" alt><br>上次刚刚写好的 lockClient 和 lockServer 现在就没有用了。而且当前的设计完全无法复用以前的代码。<br>作业要求里面给了一个参考的设计。但是那个设计繁琐的让人抓狂。实际上用不着这么复杂的。这里介绍我的方法，当然大家尽可以设计自己的算法。唯一需要提醒的是，如果你们需要完成作业七，那么设计算法之前请先参考那边的要求。<br>lockClient 使用一个 std::map&lt;lockid, lockInfo&gt; 维护锁的相关信息。键是锁的id，值是一个结构体，包括：锁的状态（正在等待服务器分配，现在空闲，现在被其他线程所使用着）、服务器是否要求还锁（布尔值）、上一次释放这把锁是什么时候（时间）。<br>在获取锁的时候：<br>0. 获取 lockClient 的全局锁。<br>1. 如果这个 map 中没有锁：<br>1.1. 在 map 中加入锁，并标记为“等待服务器分配”的状态。<br>1.2. 告知服务器我要锁。<br>1.3. 服务器如果返回的时候报告获得锁成功，则将锁标记为“空闲”，并根据服务器报告的是否有人在排队标记服务器是否要求还锁的值。<br>1.4. 释放全局锁并回到第0步。<br>2. 如果这个 map 中有这个锁，但是当前的状态不是“空闲”：释放全局锁并回到第0步。<br>3. 如果这个 map 中有这个锁，而且是“空闲”的状态：标记为“在被使用着”，释放全局锁并完成。<br>在释放锁的时候：<br>0. 获取 lockClient 的全局锁。<br>1. 将这个锁的状态标记为“空闲”，并记录刚才释放的时间。（不还给服务器）<br>2. 释放第0步的全局锁。<br>retry回调函数：<br>0. 获取 lockClient 的全局锁。<br>1. 如果这个锁当前是“等待服务器分配”的状态或者这把锁当前在本地不存在，那么把他标记为“空闲”。<br>2. 根据服务器报告是否有人在排队标记当前服务器是否要回锁。<br>3. 释放第0步的全局锁。<br>revoke回调函数：<br>-1. 用不到这个回调函数。<br>此外开一个后台的线程，这个线程的逻辑如下：<br>0. 休息80毫秒。<br>1. 获取 lockClient 的全局锁。<br>2. 逐个锁检查，看看是不是有哪个锁服务器找我们要，现在是空闲的状态，释放这把锁的事件发生在很久（比如0.3秒）之前，三个条件同时满足。<br>2.1. 对找到的锁标记为“正在被使用”的状态，并记录下来。<br>3. 释放第1步拿到的全局锁。<br>4. 对2.1记录下来的每个锁：<br>4.1. 告诉服务器这个锁不要了。<br>4.2. 在获取 lockClient 的全局锁的情况下，从 map 中删掉这个锁。<br>5. 回到第0步。<br>服务器处也是使用 map 保存锁。其中对锁的描述信息包括：当前在哪个客户端那里，有哪些客户端在排队（因为后面作业的需要，排队请勿使用 queue，而是使用vector）。<br>在获取锁的时候：<br>0. 获取 lockServer 的全局锁<br>1. 如果这个锁不存在则新建一个，并标记为空闲。<br>2. 如果当前这个锁没人用，或者这个锁已经分配给了这个客户端：<br>2.1. 标记这个锁属于这个客户端。<br>2.2. 释放第0步的全局锁并返回用户当前是否有人在排队的信息。<br>3. 如果当前这个锁已经有人用了：<br>3.1. 如果当前队列为空那么通知当前拿着锁的客户端有人等着了，呆会儿找他要锁。<br>3.2. 如果这个客户端不在队列里面则将这个客户端加到队列的最后面。<br>3.3. 释放第0步的全局锁。<br>3.4. 如果3.1的时候要找那个人要锁，现在去给他发 retry ，并告诉他有人在等着。<br>3.5. 返回客户端，告诉他这个锁现在拿不到，让他继续等待。<br>在释放锁的时候：<br>0. 获取 lockServer 的全局锁<br>1. 如果这个锁当前不是被这个客户端拿着：释放第0步的锁并返回客户端释放成功。<br>2. 如果这个锁当前被这个客户端拿着：<br>2.1. 如果队列为空，那么将锁释放掉。<br>2.2. 如果队列不为空，队列出队，告诉队列最前面的那个客户端你的锁好了，把当前拿着锁的客户端记为这个客户端。<br>2.3. 释放第0步的全局锁，并返回客户端释放成功。<br>实现的时候要注意的一个问题是最后一个参数是传引用的，所以可以用那个参数来返回上面的额外信息。<br>另一个要注意的问题是在挂载文件系统的时候，yfsClient 要对根目录做一遍 put 操作。这个时候如果加了锁，而很长时间拿不到锁的话，会挂载失败。解决办法是这个地方不申请锁。而且事实上谁先谁后都是无所谓的，只要能清零就好了。<br>上面这个实现并不是我当时的实现，而是我的作业七的实现的简化版。和我这个作业的实现在复杂性上没什么差别。<br>调试的时候，因为几个 lockClient 打印到同一个文件里面，所以区分很麻烦。我的实现方法是每个 lockClient 分配一个不同的颜色。在打印日志的时候将日志的内容印成不同的颜色以进行区分。<br>这段代码不是很重要，因为后面再改就又是重写了，所以不用太认真的。测试可以过就好了。不过因为多线程会有一些随机性的东西，所以建议多测试几次。</p>
+<h1 id="作业五-文件的缓存"><a href="#作业五-文件的缓存" class="headerlink" title="作业五 文件的缓存"></a>作业五 文件的缓存</h1><p>这个作业相当于CSE F11的作业三的后半部分。这次要做的是将文件的内容进行缓存。其实看这程序的发展，想也能想到这里该写这个了。因为一共就这么俩地方是有网络访问的。程序的架构和之前继续没什么变化，除了多了个Cache和个箭头之外。<br><img src="http://fmn.rrimg.com/fmn065/20140121/0030/original_Mkyt_558a00009445125f.jpg" alt><br>所以说我们这次的实现就是这两部分，一个Cache和一个箭头。<br>我先解释Cache这块。我们需要缓存下来从extentServer获取的相关信息。不过其实有用的就是内容罢了。元数据的话，编一个似乎都不会有什么问题。不过我实现的时候是处理了元数据的，所以不清楚元数据靠编的怎么样。不过我目测这个是可以的。<br>总之就是之前每次一要改文件了，就要get/put一遍这个文件，劳神费力的。现在要减少get/put操作。而缓存的前提是不会有别人把这个东西改掉。那如何避免别人改掉呢，显然就是靠锁。锁我们之前已经实现了，当某个锁在本地的时候，就意味着这个锁可以帮助我们保护这些数据免于被别的客户端修改。所以我们需要注意的是得到锁和归还锁两个动作。<br>得到锁这个动作可以在每次 yfsClient 获得锁之后告诉 extentClientCache。因为如果 yfsClient 得到了锁，那么这个锁就一定在本地。而释放锁这件事情不能让 yfsClient 说。因为即便 yfsClient 释放了锁，这个锁还可能在本地的 lockClient 里面没有还给锁服务器。这个时候不应该把缓存刷到文件服务器上。所以只有 lockClient 要还锁的时候才会通知 extentClientCache 锁要被释放了。这就是图上加上去的那个蓝色的箭头的用意了。<br>extentClientCache 在本地维护一个 map，map里面存储了有哪些锁是在本地的。以及这些锁对应的 inode 的内容等相关信息。读写就用这个 map 做缓存数据的存储。而释放锁的时候将更新过的数据写回文件服务器。<br>实现上，实现一个 lock_release_user 的子类，给他传 extentClientCache 的指针，并把他放到 lockClientCache 里面去。等 lockClientCache 要释放一把锁的时候，就调用这个 lock_release_user 的对象中的 dorelease，然后这个 dorelease 再通知 extentClientCache。<br>作业并没有给 extentClientCache 的代码，甚至连文件都没有。所以我们要新建一个文件。因为如果有 cpp 文件，要改 GNUMakefile，而且连接什么的也各种问题，所以我个人推荐直接写成内联的函数堆在 h 文件里面比较好。<br>extentClientCache 要实现的函数和 extentClient 完全一样，不过不建议使用继承，主要原因是继承之后你会发现那坨代码用起来很不方便。建议的处理方法是新建一个 extentClient 的对象放在这个类里面来使用。<br>在对 extentClientCache 做操作的时候，先检查本地是否有这个锁。如果没有这个锁，就直接调用原来的 extentClient 的代码。<br>如果本地有这个锁，那么对文件的读、写、读元数据、写元数据的操作都在缓存中进行。但是新建和删除操作还是要直接和文件服务器通讯来解决的。这是因为文件被删除之后再缓存这个文件就毫无意义了。而新建的，你肯定连 inode 号都不知道，所以肯定也不会有那把锁的。<br>建议在这个 extentClientCache 里面也加一个全局的锁，在对那个 map 做操作的时候拿上这把锁，以保证数据安全。<br>这段代码后面也没啥用了，能过测试就好了，不用太较真了。</p>
+<h1 id="作业六-Paxos算法"><a href="#作业六-Paxos算法" class="headerlink" title="作业六 Paxos算法"></a>作业六 Paxos算法</h1><p>这个作业相当于CSE F11的作业四。这个作业是这里面最无聊的作业之一了。我至今不明白他要我干嘛，反正是给了一个算法，然后按照他的要求去做就好了。作业说明里面给了很详细的伪代码，然后就照着实现就好了。架构大概是这样的：<br><img src="http://fmn.rrimg.com/fmn064/20140121/0110/original_EhzL_1faf0000822e118f.jpg" alt><br>虽然更新的时候还给了一堆文件，但是别的都可以无视掉的。<br>唯一一个我这做的比较奇怪的地方是，我写了个广播用的模板函数，在需要给所有其他客户端依次发 RPC 请求的时候用这个。<br>这段代码只要能过测试就好了。虽然作业七还会用到这些东西，但是只要过了测试，作业七也不会受到什么影响的样子。我这遇到的唯一一个问题是我的 reply oldinstance 这里写错了，但是到了作业七才被查出来。<br>这个lab就写这么点没关系吗？好吧，问题是我真的不知道发生了什么啊。所以写这些已经够多的了吧。</p>
+<h1 id="作业七-复制状态机"><a href="#作业七-复制状态机" class="headerlink" title="作业七 复制状态机"></a>作业七 复制状态机</h1><p>这个作业相当于CSE F11的作业五。作业的要求是用复制状态机和 Paxos 来实现有多个 lockServer 的模型。这样的好处是其中一个挂掉不影响别的正常运转。程序的架构如图：<br><img src="http://fmn.rrimg.com/fmn057/20140121/0135/original_V4dU_2dc1000269fb118e.jpg" alt><br>Server 刚开时用Paxos协议加入到列表中，config 模块负责监听其他 Server 的心跳，如果某个 Server 死了或者丢了，那么就向 Paxos 汇报，并试图将这个 Server 从列表中删掉。config 还维护当前谁作为这些 Server 中的 master。选取的方法是谁的资历最老，谁做 master。<br>RSM 模块接收config的报告，知道有哪些锁服务器，以及谁是领导。当收到用户的请求的时候，如果自己是领导，就把消息告诉所有其他的 RSM 。只有所有锁服务器都收到消息才向用户报告成功。否则总是报告给用户失败。当作为领导的 RSM 成功地告诉了所有其他的 RSM 这个消息，那么他就调用 lockServer 中的对应函数来提交操作。如果一个 RSM 收到了领导的 RSM 告知的操作，那么他也提交给自己的 lockServer。<br>Paxos 和 config 中维护的状态是一个单调递增的整数（view id），表示有了几次“人员”变动（view change，不管是多了个新的服务器，还是坏掉或者断掉了一台服务器）。而 RSM 中保存的是一个整数对，前者与 config 中的相当，后者表示在这个人员列表（view）的情况下，执行了多少RPC操作了。<br>如果 RSM 收到 config 的报告说现在人员有变化，那么就会进入到恢复模式中。这个模式中所有服务器停止接受新的客户请求， 新的 master 服务器将自己的状态同步给所有服务器。在同步完成后释放掉锁完成恢复，进入正常的模式。<br>lockClient如果你是按照上面我说的那个做的，需要的改动就是如果找服务器要锁，但是服务器半天不给，那么就再要一次。lockServer需要的改动是把需要发 retry 的这件事记下来而不要在那个时候发。单独开一个线程负责发送 retry。当然，实现的时候还是要把原来的代码整个拷贝过来，然后再进行修改。<br>中间加入的节点要直接获取别的节点的 lockServer 的状态并创建出自己的 lockServer。这个状态的获取需要实现 lockServer 的相关序列化（marshal）函数，函数基本上都给了源代码了。之前说不要用queue正是因为这里序列化的时候会很不方便。<br>最后根据作业要求在一些地方加上 breakpoint 等用于调试。<br>建议在写这个代码之前，先结合上面的这些介绍，阅读一下提供的那些代码。因为很多东西只有看了代码才能明白在干嘛。还有就是这次作业要格外小心锁和信号量的问题。<br>反正都是最后一个作业了。能过测试就好了，代码好看不好看最多也是下一届抄的时候看了，还在乎什么代码。所以这个作业尽可以无视代码整齐与否等各种问题。</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>每次提交作业后要保留好这次提交的作业。如果助教那里测试有问题可能会要求拿着电脑去给助教演示某个作业的测试的。<br>善用打日志的方式进行调试，因为有些会有“超时”的程序，是很难用 gdb 进行调试的，相反日志调试会比较方便。从一开始的作业中就把日志记的规整一些，不然一坨乱七八糟的日志会令人很头疼的。<br>作业有问题的时候被坑很久是很正常的，所以不要快到截止日期了才开始写。如果实在有问题看看是这次作业的问题，还是以前的作业留下的。一个简单的办法是用一些可信的正确的代码替换掉自己之前的作业，看看是不是还有同样的问题。如果问题解决了，那就说明问题是出在之前的代码上的。<br>写程序之前务必弄清楚在干嘛，尤其越是后面的作业。如果不知道自己在干嘛这作业会很耽误时间的。<br>课程Q&amp;A是个很好的解决问题的平台，尤其是前面几届学生遇到的问题也可以很方便地搜索到，要善加利用。<br>如果最后两个作业是选做的，那么建议不要做。<br>码代码的时候请保持良好的心态和充足的睡眠。<br>程序逻辑尽可能简单，即便你的程序可能有更好的效率或者更好的参数指标。但是逻辑简单永远是第一位的。<br>不要抄作业。以及：只要不被发现就不算抄袭哦！<br>最后，这篇文章难免会有什么地方写的有问题，而且你们的作业要求也可能和我们并不完全相同。所以大家也别全信就是了啊～</p>
+<p>转自人人网<a href="http://blog.renren.com/blog/435494914/921087193" target="_blank" rel="noopener">@田生</a></p>
+
+      
+    </div><!-- .entry-content -->
+
+    <footer class="entry-meta">
+    <a href="/yfs-lab/">
+    <time datetime="2014-01-21T02:15:00.000Z" class="entry-date">
+        1月 21 2014
+    </time>
+</a>
+    
+  <span class="article-delim">&#8226;</span>
+  <div class="article-category">
+  <a class="article-category-link" href="/categories/编程/">编程</a>
+  </div>
+
+    
+    </footer>
+</article>
+
+
+    
+<nav class="nav-single">
+    <h3 class="assistive-text">文章导航</h3>
+    
+        <span class="nav-previous"><a href="/百度官方-WordPress-结构化数据插件/" rel="prev"><span class="meta-nav">←</span> 【百度官方】WordPress 结构化数据插件</a></span>
+    
+    
+        <span class="nav-next"><a href="/吐槽一下wp2014的新模版/" rel="next">吐槽一下wp2014的新模版。。。 <span class="meta-nav">→</span></a></span>
+    
+</nav><!-- .nav-single -->
+
+
+
+
+
+
+<section id="comments">
+  <!-- 多说评论框 start -->
+  <div class="ds-thread" data-thread-key="post-yfs-lab" data-title="yfs lab 总结" data-url="http://www.flygon.net/yfs-lab/"></div>
+  <!-- 多说评论框 end -->
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:'flhexo'};
+    (function() {
+	  var ds = document.createElement('script');
+	  ds.type = 'text/javascript';ds.async = true;
+	  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	  ds.charset = 'UTF-8';
+	  (document.getElementsByTagName('head')[0]
+	   || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+  <!-- 多说公共JS代码 end -->
+</section>
+
+
+</div></div>
+        <div id="secondary" class="widget-area" role="complementary">
+  
+    <aside class="widget">
+    <h3 class="widget-title">关于我</h3>
+    <div class="widget-content">
+      <p>邮箱：admin(at)flygon.net</p>
+      <p>QQ：562826179</p>
+      <iframe width="100%" height="110" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=0&fansRow=1&ptype=1&speed=0&skin=1&isTitle=0&noborder=0&isWeibo=0&isFans=1&uid=2216356441&verifier=2e06a95d&dpc=1"></iframe>
+      
+      <iframe width="100%" height="320" frameborder="0" scrolling="no" src="https://cdn.jsdelivr.net/github-cards/1.0.2/cards/medium.html?user=wizardforcel&identity=ghcard-wizardforcel-1"></iframe>
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">赞助我</h3>
+    <div class="widget-content">
+      <img src='/css/images/qr_alipay.png' style='width:100%;' />
+    </div>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">公众号</h3>
+    <div class="widget-content">
+      <p>请关注我们的公众号，回复“教程/路线/比赛/报告/技术书/轻小说/漫画/新知”来获取更多资源：</p>
+      <p><img src='https://home.apachecn.org/img/about/gzh_qr.jpg' style='width:100%;background:rgba(255,255,255,0.6)' /></p>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Music</h3>
+    <div class="widget-content">
+      <audio src="/asset/杀不死的SB%20-%20in3.aac" controls="controls"
+             loop="loop" style="width:100%">
+        您的浏览器不支持 audio 标签。
+      </audio>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+    <h3 class="widget-title">广告</h3>
+    <div class="widget-content">
+        <!-- google ads -->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:250px;height:250px"
+             data-ad-client="ca-pub-3565452474788507"
+             data-ad-slot="9493159174"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</aside>
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget-content">
+      <ul>
+        
+          <li>
+            <a href="/项目沉思录-1/">项目沉思录 1</a>
+          </li>
+        
+          <li>
+            <a href="/2022-规划/">2022 规划</a>
+          </li>
+        
+          <li>
+            <a href="/资本主义反抗指南精要-v0.1/">资本主义反抗指南精要（v0.1）</a>
+          </li>
+        
+          <li>
+            <a href="/2021-规划/">2021 规划</a>
+          </li>
+        
+          <li>
+            <a href="/2020-规划/">2020 规划</a>
+          </li>
+        
+      </ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget-content">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">一月 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">十二月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">十一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">九月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">十二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">七月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">五月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">十二月 2014</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">十一月 2014</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">九月 2014</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">八月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">七月 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">六月 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">五月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">四月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">三月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01/">一月 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/11/">十一月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">十月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">九月 2013</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">八月 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1899/11/">十一月 1899</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget-content">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/wordpress/">wordpress</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/公告/">公告</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/应用/">应用</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂记/">杂记</a><span class="category-list-count">29</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程/">编程</a><span class="category-list-count">45</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网站/">网站</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/资源/">资源</a><span class="category-list-count">5</span></li></ul>
+    </div>
+  </aside>
+
+  
+    
+  <aside class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-content tagcloud">
+      <a href="/tags/Invoke/" style="font-size: 10px;">Invoke</a> <a href="/tags/awvs/" style="font-size: 10px;">awvs</a> <a href="/tags/cpp/" style="font-size: 20px;">cpp</a> <a href="/tags/csharp/" style="font-size: 15px;">csharp</a> <a href="/tags/html5/" style="font-size: 10px;">html5</a> <a href="/tags/safe3/" style="font-size: 10px;">safe3</a> <a href="/tags/sqlmap/" style="font-size: 15px;">sqlmap</a> <a href="/tags/sql注入/" style="font-size: 20px;">sql注入</a> <a href="/tags/xss/" style="font-size: 10px;">xss</a> <a href="/tags/多线程/" style="font-size: 15px;">多线程</a> <a href="/tags/密码/" style="font-size: 10px;">密码</a> <a href="/tags/生物劝退/" style="font-size: 10px;">生物劝退</a> <a href="/tags/编程/" style="font-size: 20px;">编程</a> <a href="/tags/网站/" style="font-size: 10px;">网站</a>
+    </div>
+  </aside>
+
+  
+    <aside class="widget">
+<h3 class="widget-title">友情链接</h3>
+<div class="widget-content">
+<ul id='link-list'>
+<!-- link begin -->
+<li><a href="http://www.apachecn.org/">ApacheCN</a></li>
+<li><a href="http://www.258ch.com/">苍海国际</a></li>
+<li><a href="http://www.714.hk/">梦殇国际</a></li>
+<li><a href="http://cuican.name/">璀璨</a></li>
+<li><a href="http://www.giuem.com/">Giuem</a></li>
+<li><a href="http://www.woaiye.com/">我爱夜</a></li>
+<li><a href="http://moelove.info/">MoeLove</a></li>
+<li><a href='http://xiaohudie.net/'>小蝴蝶</a></li>
+<li><a href='http://www.wczf.net/'>微尘逐风</a></li>
+<li><a href='http://cyto.top/'>Cytosine</a></li>
+<li><a href='https://cismon.net/'>Pensieve</a></li>
+<li><a href="http://gaocegege.com/Blog/">高策</a></li>
+<li><a href='http://zhangwenli.com/blog/'>羡辙杂俎</a></li>
+<li><a href="http://www.geekzu.cn/">极客族</a></li>
+<li><a href="http://hardrain980.com">骤雨</a></li>
+<li><a href="http://lolil.lofter.com/">庭园</a></li>
+<li><a href="http://www.sunweihu.com/">墨涩网</a></li>
+<li><a href='http://lvycf.com'>HDL</a></li>
+<li><a href='http://www.farquer.cn/'>farquer</a></li>
+<li><a href='https://loveincode.cnblogs.com/'>loveincode</a></li>
+<li><a href='https://minemine.cc/'>Minemine</a></li>
+<!-- link end -->
+</ul>
+</div>
+<script>
+    // links shuffle
+    document.addEventListener('DOMContentLoaded', evt => {
+        var linkUl = document.querySelector('#link-list');
+        var links = document.querySelectorAll('#link-list li');
+        links = Array.from(links);
+        links.forEach(x => x.remove());
+        var len = links.length;
+        for(var i = 0; i < len; i++) {
+            var r = Math.floor(Math.random() * links.length);
+            linkUl.append(links[r]);
+            links.splice(r, 1);
+        }
+    });
+</script>
+</aside>
+  
+    <aside class="widget">
+    <h3 class="widget-title">统计</h3>
+    <div class="widget-content">
+      <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000045945'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000045945%26online%3D1' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+</aside>
+
+  
+    <script>
+    // sub title
+    var subtitleList = [
+        "『卑鄙是卑鄙者的通行证，高尚是高尚者的墓志铭。』——北岛",
+        "『坦白从宽牢底坐穿，抗拒从严回家过年。』",
+        "『所有模型都是错的，但其中一些是有用的。』",
+        "『程序员的双手是魔术师的双手，他们把枯燥无味的代码变成了丰富多彩的软件。』——《疯狂的程序员》",
+        "『质疑计算机能不能思考，就相当于质疑潜艇能不能游泳。』——Edsger Dijkstra",
+        "人们认为计算机科学是天才的艺术，但是实际情况相反，只是许多人在其它人基础上做一些东西，就像一面由石子垒成的墙。』——高德纳",
+        "『Stay young. Stay simple. Always naive!』",
+        "『你们媒体千万要记着，不要「见得风，是得雨」。接到消息，你们媒体本身也要判断。』——长者",
+        "『假设这些完全无中生有的东西，你再帮他说一遍，你等于......你也有责任吧？』——长者",
+        "『刚才你问我啊，我可以回答你一句「无可奉告」。』——长者",
+        "『我告诉你们我是身经百战了，见得多了！』——长者",
+        "『美国的华莱士，比你们不知要高到哪里去了，我跟他谈笑风生。』——长者",
+        "『我有这个必要告诉你们一点，人生的经验。』——长者",
+        "『我没有说要钦定，没有任何这个意思。』——长者",
+        "『你们啊，不要想喜欢弄个大新闻，说现在已经钦定了，就把我批判一番。』——长者",
+        "『一个人的命运啊，当然要靠自我奋斗，但是也要考虑历史的进程。』——长者",
+        "『我说另请高明吧，我实在也不是谦虚。』——长者",
+        "『苟利国家生死以，岂因祸福避趋之。』——林则徐",
+        "『敢同恶鬼争高下，不向霸王让寸分。』——毛泽东",
+        "『我生不为逐鹿来，都门懒筑黄金台。状元百官都如狗，总是刀下觳觫材。』——张献忠",
+        "『我自成佛自度我，佛度凡尘我度佛。』",
+        "『龙吟九天，一曲焚尘；苍山听雪，归时余几人。』",
+        "『人最大的痛苦就是说一些自己都不相信的话。』",
+        "『燃琴为薪，铸银矢以射白羽；斑音成竹，裁短笛而驭青龙。』",
+        "『我们在人生的每个阶段，能影响多少人，就影响多少人，哪怕只能影响一个人，也好过不影响。』——罗永浩",
+        "『每个人心中都有一个死小孩。』——《龙族II》",
+        "『前面是山，我们就爬山；前面是海，我们就渡海；前面是皇宫，我们就开炮！』——《龙族前传》",
+        "『不要习惯了黑暗就为黑暗辩护；不要为自己的苟且而得意；不要嘲讽那些比自己更勇敢热情的人们。我们可以卑微如尘土，不可扭曲如蛆虫。』——季业",
+    ];
+    
+    document.addEventListener('DOMContentLoaded', evt => {
+        var i = Math.floor(Math.random() * subtitleList.length);
+        document.querySelector('#subtitle').innerText = subtitleList[i];
+    });
+
+    //Kill XP and IE8
+    (function(){
+        var ua = navigator.userAgent;
+        var res = /Windows NT (\d+\.\d+)/.exec(ua);
+        var xpOrLower = res && JSON.parse(res[1]) < 6;
+        res = /MSIE (\d+\.\d+)/.exec(ua);
+        var ie8OrLower = res && JSON.parse(res[1]) < 9;
+        if(xpOrLower || ie8OrLower) {
+            alert('请不要用XP及之前的Windows系统，和IE8及之前的IE浏览器访问本站！');
+            location.href = "about:blank";
+        }
+        var fromBaiduSE = /^https?:\/\/www.baidu.com/.test(document.referrer);
+        if(fromBaiduSE) {
+            alert('检测到你还在使用百度搜索，作为一个程序员，这是一种自暴自弃！\n\n做不作恶的程序员，从不用百度开始！');
+            location.href = "about:blank";
+        }
+    })();
+</script>
+  
+</div>
+      </div>
+      <footer id="colophon" role="contentinfo">
+    <p>&copy; 2022 Flygon; All rights reserved.</p>
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/navigation.js"></script>
+
+<div id="bg"></div>
+
+  </div>
+</body>
+</html>
